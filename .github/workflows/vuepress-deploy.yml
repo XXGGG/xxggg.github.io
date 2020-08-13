@@ -5,12 +5,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
-
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    
+    - name: Install and Build
+      run: |
+        npm install
+        npm run build
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_BRANCH: master
-        BUILD_SCRIPT: npm run build
-        BUILD_DIR: .vuepress/dist/
+        CI:false
+    
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: master # The branch the action should deploy to.
+        FOLDER: .vuepress/dist # The folder the action should deploy.
+
+
