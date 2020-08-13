@@ -1,7 +1,7 @@
 module.exports = {
   "title": "谢夏戈的博客",
   "description": "谢夏戈的博客",
-  "dest": "public",
+  "dest": "dist",
   "head": [
     [
       "link",
