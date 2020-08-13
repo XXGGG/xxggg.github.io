@@ -1,11 +1,9 @@
 module.exports = {
     title: '谢夏戈',
     description: 'My First Blog',
-    dest: 'public',
     head: [
         ['link', { rel: 'icon', href: '/logo.png'}]
     ],
-    base: '/',// 部署到github的相关配置
     //主题配置
     themeConfig: {
         //logo
