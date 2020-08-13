@@ -1,1 +1,3 @@
 node_modules
+*.sh
+docs/.vuepress/dist/
