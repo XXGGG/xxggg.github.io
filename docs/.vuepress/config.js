@@ -1,6 +1,7 @@
 module.exports = {
     title: '谢夏戈',
     description: 'My First Blog',
+    dest: 'public',
     head: [
         ['link', { rel: 'icon', href: '/logo.png'}]
     ],
