@@ -1,4 +1,20 @@
-# 博客的工程文件
-
-通过VuePress搭建
-
+---
+home: true
+heroText: 🍀 谢夏戈 🍀
+tagline: 🍓🍉🍊🍋🥭🍍🍎🥝🍇
+heroImage: /hero.png
+heroImageStyle: {
+  maxWidth: '200px',
+  # width: '100%',
+  display: block,
+  margin: '6rem auto 1.5rem',
+  borderRadius: '50%',
+  boxShadow: '0 5px 18px rgba(0,0,0,0.2)'
+}
+bgImageStyle: {
+  height: '450px'
+}
+isShowTitleInHome: false
+actionText: null
+actionLink: null
+---

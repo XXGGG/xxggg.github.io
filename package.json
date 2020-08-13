@@ -7,12 +7,13 @@
     "test": "npm run dev",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
   },
   "author": "XieXiaGe",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.0",
     "vuepress": "^1.5.3"
   }
 }
