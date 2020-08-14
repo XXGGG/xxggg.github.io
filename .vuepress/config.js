@@ -1,7 +1,7 @@
 module.exports = {
   "title": "谢夏戈的博客",
   "description": "谢夏戈的博客",
-  "dest": "dist",
+  "dest": "public",
   "head": [
     [
       "link",
@@ -114,7 +114,7 @@ module.exports = {
     "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
-    "lastUpdated": "Last Updated",
+    "lastUpdated": "最后更新于",
     "author": "谢夏戈",
     "authorAvatar": "/avatar.png",
     // "record": "xxxx",
