@@ -1,16 +1,14 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "my blog",
+  "description": "谢夏戈的博客",
   "main": "index.js",
   "scripts": {
     "test": "npm run dev",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
     "dev": "vuepress dev .",
     "build": "vuepress build ."
   },
-  "author": "XieXiaGe",
+  "author": "谢夏戈",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/theme-blog": "^2.3.0",
