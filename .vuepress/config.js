@@ -61,16 +61,6 @@ module.exports = {
             "icon": "reco-weibo"
           },
           {
-            "text": "简书",
-            "link": "https://www.jianshu.com/u/fde093b48a36",
-            "icon": "reco-jianshu"
-          },
-          {
-            "text": "掘金",
-            "link": "https://juejin.im/user/4406498335916455",
-            "icon": "reco-juejin"
-          },
-          {
             "text": "CSDN",
             "link": "https://blog.csdn.net/qq_42460209",
             "icon": "reco-csdn"
@@ -99,22 +89,22 @@ module.exports = {
     },
     "friendLink": [
       {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
+        "title": "谢夏戈的博客（GitHub）xxggg.github.io",
+        "desc": "GitHub Pages 部署的博客",
+        // "email": "534464179@qq.com",
+        "link": "https://xxggg.github.io"
       },
       {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
+        "title": "谢夏戈的博客（码云) xxggg.gitee.io",
+        "desc": "Gitee Pages 同步 Github Pages内容的 ， “xxggg.github.io”登陆不上时可以登陆这个！.",
+        // "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://xxggg.gitee.io"
       }
     ],
     "logo": "/logo.png",
     "search": true,
-    "searchMaxSuggestions": 10,
-    "lastUpdated": "最后更新于",
+    "searchMaxSuggestions": 100,
+    "lastUpdated": "最后更新",
     "author": "谢夏戈",
     "authorAvatar": "/avatar.png",
     // "record": "xxxx",
