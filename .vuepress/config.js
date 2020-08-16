@@ -1,6 +1,6 @@
 module.exports = {
   "title": "谢夏戈的博客",
-  "description": "谢夏戈的博客",
+  "description": "阿巴阿巴阿巴~~",
   "dest": "public",
   "head": [
     [
@@ -32,14 +32,19 @@ module.exports = {
         "icon": "reco-date"
       },
       {
-        "text": "测试",
+        "text": "项目",
         "icon": "reco-other",
         "items": [
           {
             "text": "试验田",
-            "link": "/docs/theme-reco/"
+            "link": "/docs/project/"
           }
         ]
+      },
+      {
+        "text": "手册",
+        "icon": "reco-other",
+        "link": "/docs/notebook/"
       },
       {
         "text": "联系",
@@ -69,11 +74,9 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/docs/theme-reco/": [
+      "/docs/notebook/": [
         "",
-        "theme",
-        "plugin",
-        "api"
+        "Git手册"
       ]
     },
     "type": "blog",
