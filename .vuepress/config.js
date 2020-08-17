@@ -20,6 +20,7 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
+    'noFoundPageByTencent': false,
     "nav": [
       {
         "text": "主页",
@@ -33,11 +34,13 @@ module.exports = {
       },
       {
         "text": "项目",
-        "icon": "reco-other",
+        "icon": "reco-api",
         "items": [
-          {
-            "text": "试验田",
-            "link": "/docs/project/"
+          {"text": "ԅ(¯﹃¯ԅ)",  "items": [{ "text": "说明", "link": "/docs/project/"}]}, 
+          {"text": "(๑•̀ㅂ•́)و✧",  
+           "items": [
+              { "text": "Veronica", "link": "/Veronica"}
+           ]
           }
         ]
       },
@@ -77,7 +80,11 @@ module.exports = {
       "/docs/notebook/": [
         "",
         "Git手册"
-      ]
+      ],
+      "/docs/project/": [
+        "",
+        "Veronica"
+      ],
     },
     "type": "blog",
     "blogConfig": {
