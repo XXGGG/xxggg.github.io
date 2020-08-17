@@ -15,3 +15,7 @@
     git rebase --skip
 
     git rebase --continue
+
+## 
+
+    git remote
