@@ -39,7 +39,7 @@ module.exports = {
           {"text": "ԅ(¯﹃¯ԅ)",  "items": [{ "text": "说明", "link": "/docs/project/"}]}, 
           {"text": "(๑•̀ㅂ•́)و✧",  
            "items": [
-              { "text": "Veronica", "link": "/Veronica"}
+              { "text": "Veronica", "link": "/Veronica/#/"}
            ]
           }
         ]
