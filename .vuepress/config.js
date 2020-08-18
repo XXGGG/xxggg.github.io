@@ -36,10 +36,10 @@ module.exports = {
         "text": "项目",
         "icon": "reco-api",
         "items": [
-          {"text": "ԅ(¯﹃¯ԅ)",  "items": [{ "text": "说明", "link": "/docs/project/"}]}, 
-          {"text": "(๑•̀ㅂ•́)و✧",  
+          {"text": "🥡ԅ(¯﹃¯ԅ)🍤",  "items": [{ "text": "说明", "link": "/docs/project/"}]}, 
+          {"text": "🍖(๑•̀ㅂ•́)و✧🍥",  
            "items": [
-              { "text": "Veronica", "link": "/veronica/","target":'_blank'}
+              { "text": "💠Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'}
            ]
           }
         ]
@@ -79,7 +79,9 @@ module.exports = {
     "sidebar": {
       "/docs/notebook/": [
         "",
-        "Git手册"
+        "Git手册",
+        "SSH-公钥私钥",
+        "奇奇怪怪的面试题"
       ],
       "/docs/project/": [
         "",
