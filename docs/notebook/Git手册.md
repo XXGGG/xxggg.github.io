@@ -13,25 +13,86 @@
     $ git config --global user.name "你的名字"
     $ git config --global user.email "你的邮@箱地址.com"
 
-## 创建本地仓库
+## 创建 本地仓库
 
     $ git init        //初始化（文件夹内会多出 .git的隐藏文件）
 
-## 绑定远程仓库
+## 绑定 远程仓库
 
     $ git remote add github <你的项目地址>
 
-## 添加到本地仓库的暂存区（常用的）
+## 添加到暂存区（常用）
 
     $ git add .       // . 表示全部//也可以特别指定一个文件
 
 git add . 后文件就会变成在仓库里“暂存的修改” 添加完说明，下次push提交上去的就是这些文件
 
-## 把暂存区的所有内容提交到本地仓库的当前分支 -m 附加修改的说明（常用的）
+## 提交到本地仓库-附加说明（常用）
 
     $ git commit -m '说明' 
 
 add 和 commit 都是提交到本地仓库的 push才是推向远程仓库的
+
+## 推送到远程仓库（常用）
+
+    $ git push
+
+## 绑定完仓库后的 初次 推送 ！！！
+
+    $ git push -u origin master
+
+## 克隆远程仓库到本地（常用）
+
+    $ git clone git@github.com:XXGGG/test.git
+
+---
+
+## 创建分支（常用） 
+    
+    $ git branch <新分支的名字>
+
+## 切换分支（常用）
+
+    $ git checkout <分支的名字>
+
+## 创建并切换分支（常用）
+
+    $ git checkout -b dev
+
+## 查看当前分支（常用）
+
+    $ git branch
+
+## 合并分支
+
+    $ git merge <分支> 
+    //这个意思是把分支合并到 当前的分支  
+    //假设当前的是master主分支，那就是把<分支>合并到当前分支
+
+## 删除分支
+
+    $ git branch -d <分支>
+
+----
+## 【新东西的git命令 switch】
+>廖雪峰老师原话👇  
+
+switch  
+我们注意到切换分支使用git checkout <branch>，而前面讲过的撤销修改则是git checkout -- <file>，同一个命令，有两种作用，确实有点令人迷惑。  
+
+实际上，切换分支这个动作，用switch更科学。因此，最新版本的Git提供了新的git switch命令来切换分支：
+
+创建并切换到新的分支，可以使用：
+
+    $ git switch -c <分支>
+
+>这个c 应该是create 创造的意思 哈哈哈
+
+直接切换到已有的master分支，可以使用：
+
+    $ git switch master
+
+>**但是说实话 我已经习惯使用git branch了 不过没事 再习惯习惯就好了**
 
 ---
 
@@ -66,8 +127,6 @@ add 和 commit 都是提交到本地仓库的 push才是推向远程仓库的
     git add的反向命令git checkout，撤销工作区修改，即把暂存区最新版本转移到工作区，
 
     git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区。
-
-
 
 
 ## 查看历史提交
@@ -122,75 +181,6 @@ add 和 commit 都是提交到本地仓库的 push才是推向远程仓库的
 
 ---
 
-## 绑定远程仓库（跟上面一样）
-
-    $ git remote add origin git@github.com:XXGGG/test.git
-
-## 推送到远程仓库（也是常用的）
-
-    $ git push
-
-## 绑定完仓库后的 初次 推送 ！！！
-
-    $ git push -u origin master
-
-## 克隆远程仓库到本地
-
-    $ git clone git@github.com:XXGGG/test.git
-
----
-
-## 创建分支（常用） 
-    
-    $ git branch <新分支的名字>
-
-## 切换分支（常用）
-
-    $ git checkout <分支的名字>
-
-## 创建并切换分支（常用）
-
-    $ git checkout -b dev
-
-## 查看当前分支（常用）
-
-    $ git branch
-
-## 合并分支
-
-    $ git merge <分支> 
-    //这个意思是把分支合并到 当前的分支  
-    //假设当前的是master主分支，那就是把<分支>合并到当前分支
-
-## 删除分支
-
-    $ git branch -d <分支>
-
-
-
-----
-## 【新东西的git命令 switch】
->廖雪峰老师原话👇  
-
-switch  
-我们注意到切换分支使用git checkout <branch>，而前面讲过的撤销修改则是git checkout -- <file>，同一个命令，有两种作用，确实有点令人迷惑。  
-
-实际上，切换分支这个动作，用switch更科学。因此，最新版本的Git提供了新的git switch命令来切换分支：
-
-创建并切换到新的分支，可以使用：
-
-    $ git switch -c <分支>
-
->这个c 应该是create 创造的意思 哈哈哈
-
-直接切换到已有的master分支，可以使用：
-
-    $ git switch master
-
->**但是说实话 我已经习惯使用git branch了 不过没事 再习惯习惯就好了**
-
-
----
 
 ## 分支合并图
 
@@ -204,37 +194,37 @@ switch
 ## 【标签管理】
 >这个老师说的好！ 但是我貌似之前工作没有用过。。。 嘟嘟嘴
 
-### 打标签
+## 打标签
 
     $ git tag v1.0
 
     $ git tag v0.9 f52c633  //打在之前的commitID
 
-### 查看标签
+## 查看标签
 
     $ git tag 
 
-### 查看标签详情（打在什么commit上面
+## 查看标签详情（打在什么commit上面）
 
     $ git show <tagname>
 
-### 还可以创建带说明的标签
+## 还可以创建带说明的标签
 
     $ git tag -a v1.0 -m "说明" <commitID>
 
 > git show <标签名> 就可以看到说明文字了
 
-### 删除标签
+## 删除标签
 
     $ git tag -d v1.0
 
-### 推送标签到远程
+## 推送标签到远程
 
     $ git push origin v1.0
 
     $ git push origin --tags        //推全部标签
 
-### 删除远程标签（比较麻烦）
+## 删除远程标签（比较麻烦）
 
     $ git push origin :refs/tags/v1.0  
     //可以登陆GitHub查看是否删除
@@ -282,7 +272,7 @@ GitHub上面有很多开源的项目，可以参与开发或者修复bug，如�
 
 ## 使用SourceTree
 
-用过但是还是喜欢在命令行敲加上vsCode里的源代码管理！！
+用过，但是还是喜欢在命令行敲加上vsCode里的源代码管理！！
 
 
 ## 变基? (git rebase)
@@ -295,5 +285,6 @@ GitHub上面有很多开源的项目，可以参与开发或者修复bug，如�
     $ git rebase --skip
 
     $ git rebase --continue
+
 
 # **【完】**
