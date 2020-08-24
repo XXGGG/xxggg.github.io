@@ -1,5 +1,5 @@
 
-# Git手册
+# 🥝Git🥝
 
 
 ## 安装?!
@@ -77,8 +77,8 @@ add 和 commit 都是提交到本地仓库的 push才是推向远程仓库的
 ## 【新东西的git命令 switch】
 >廖雪峰老师原话👇  
 
-switch  
-我们注意到切换分支使用git checkout <branch>，而前面讲过的撤销修改则是git checkout -- <file>，同一个命令，有两种作用，确实有点令人迷惑。  
+switch 
+我们注意到切换分支使用```git checkout <branch>```,而前面讲过的撤销修改则是```git checkout -- <file>```，同一个命令，有两种作用，确实有点令人迷惑。  
 
 实际上，切换分支这个动作，用switch更科学。因此，最新版本的Git提供了新的git switch命令来切换分支：
 
@@ -285,6 +285,29 @@ GitHub上面有很多开源的项目，可以参与开发或者修复bug，如�
     $ git rebase --skip
 
     $ git rebase --continue
+
+
+## Q：明文保存git密码push/pull
+A：https://blog.csdn.net/gao454917848/article/details/82977349
+
+    1. git bash进入你的项目目录，输入：
+    2. git config --global credential.helper store
+
+然后你会在你本地生成一个文本，上边记录你的账号和密码。当然这些你可以不用关心。然后你使用上述的命令配置好之后，再操作一次git pull，然后它会提示你输入账号密码，这一次之后就不需要再次输入密码了 
+
+
+## Q：删除store明文储存
+A：https://www.cnblogs.com/volnet/p/git-credentials.html
+
+    git config --global --unset credential.helper -f
+    git config --local --unset credential.helper -f
+
+## 工具
+远程连接liunx服务器 : FinalShell
+
+Git桌面管理工具  :   Sourcetree
+
+
 
 
 # **【完】**

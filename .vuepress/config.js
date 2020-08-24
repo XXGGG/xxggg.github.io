@@ -79,8 +79,16 @@ module.exports = {
     "sidebar": {
       "/docs/notebook/": [
         "",
-        "Git手册",
+        "Git",
         "SSH-公钥私钥",
+        "【什么是知识】",
+        "【HTML5】",
+        "【CSS3】代码片段",
+        "【CSS3】基础知识",
+        "【JavaScript】小笔记",
+        "【JavaScript】大笔记",
+        "【Vue】-axios",
+        "【webpack】",
         "奇奇怪怪的面试题"
       ],
       "/docs/project/": [
