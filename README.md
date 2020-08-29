@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: 🍀 谢夏戈 🍀
+heroText: 🍀 了解的越多，知道的越少。 🍀
 tagline: 🍓🍉🍊🍋🥭🍍🍎🥝🍇
 heroImage: /hero.png
 heroImageStyle: {

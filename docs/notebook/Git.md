@@ -10,68 +10,68 @@
 ### 我还是直接记windows的吧
 直接[官网下载](https://git-scm.com/downloads),安装完成后，在开始菜单里找到“Git”->“Git Bash”  
 
-    $ git config --global user.name "你的名字"
-    $ git config --global user.email "你的邮@箱地址.com"
+    git config --global user.name "你的名字"
+    git config --global user.email "你的邮@箱地址.com"
 
 ## 创建 本地仓库
 
-    $ git init        //初始化（文件夹内会多出 .git的隐藏文件）
+    git init        //初始化（文件夹内会多出 .git的隐藏文件）
 
 ## 绑定 远程仓库
 
-    $ git remote add github <你的项目地址>
+    git remote add github <你的项目地址>
 
 ## 添加到暂存区（常用）
 
-    $ git add .       // . 表示全部//也可以特别指定一个文件
+    git add .       // . 表示全部//也可以特别指定一个文件
 
 git add . 后文件就会变成在仓库里“暂存的修改” 添加完说明，下次push提交上去的就是这些文件
 
 ## 提交到本地仓库-附加说明（常用）
 
-    $ git commit -m '说明' 
+    git commit -m '说明' 
 
 add 和 commit 都是提交到本地仓库的 push才是推向远程仓库的
 
 ## 推送到远程仓库（常用）
 
-    $ git push
+    git push
 
-## 绑定完仓库后的 初次 推送 ！！！
+## 绑定完仓库后的 初次/首次 推送 ！！！
 
-    $ git push -u origin master
+    git push -u origin master
 
 ## 克隆远程仓库到本地（常用）
 
-    $ git clone git@github.com:XXGGG/test.git
+    git clone git@github.com:XXGGG/test.git
 
 ---
 
 ## 创建分支（常用） 
     
-    $ git branch <新分支的名字>
+    git branch <新分支的名字>
 
 ## 切换分支（常用）
 
-    $ git checkout <分支的名字>
+    git checkout <分支的名字>
 
 ## 创建并切换分支（常用）
 
-    $ git checkout -b dev
+    git checkout -b dev
 
 ## 查看当前分支（常用）
 
-    $ git branch
+    git branch
 
 ## 合并分支
 
-    $ git merge <分支> 
+    git merge <分支> 
     //这个意思是把分支合并到 当前的分支  
     //假设当前的是master主分支，那就是把<分支>合并到当前分支
 
 ## 删除分支
 
-    $ git branch -d <分支>
+    git branch -d <分支>
 
 ----
 ## 【新东西的git命令 switch】
@@ -84,13 +84,13 @@ switch
 
 创建并切换到新的分支，可以使用：
 
-    $ git switch -c <分支>
+    git switch -c <分支>
 
 >这个c 应该是create 创造的意思 哈哈哈
 
 直接切换到已有的master分支，可以使用：
 
-    $ git switch master
+    git switch master
 
 >**但是说实话 我已经习惯使用git branch了 不过没事 再习惯习惯就好了**
 
@@ -98,13 +98,13 @@ switch
 
 ## 查看本地仓库状态
 
-    $ git status
+    git status
 
 （命令行里的）modified：就是你修改过的文件
 
 ## 查看具体修改了什么内容
 
-    $ git diff
+    git diff
 
 按空格就可以往下显示  
 **不过具体修改了什么,还是直接用vs code侧边栏第三个那个“源代码管理”来看比较直观**  
@@ -131,9 +131,9 @@ switch
 
 ## 查看历史提交
 
-    $ git log     //(按Q退出 “quit”)
+    git log     //(按Q退出 “quit”)
 
-    $ git log --pretty=oneline      //精简版
+    git log --pretty=oneline      //精简版
 
 ## 用HEAD表示当前版本
 
@@ -142,7 +142,7 @@ switch
 
 ## 回到以前的版本（reset）
 
-    $ git reset --hard HEAD^        //（回到上一个版本）
+    git reset --hard HEAD^        //（回到上一个版本）
 >如果已经有A -> B -> C，想回到B：
 >
 >方法一：reset到B，丢失C：
@@ -160,11 +160,11 @@ switch
 >如果C就是修改，现在又要改回来，将来可能再改成C，那你就revert
 ## 返回未来的版本（reset）
 
-    $ git reset --hard <commit ID>        //（回到指定commitID的版本）
+    git reset --hard <commit ID>        //（回到指定commitID的版本）
 
 ## 查看命令历史（查看git记录你的所有命令）
 
-    $ git reflog
+    git reflog
 
 可以用这个找到你的commitID，也可以看到你使用reset的命令
 
@@ -174,9 +174,9 @@ switch
 
 **其实这个是撤销工作区跟暂存区的修改 可以用vs code的“源代码管理”更方便**
 
-    $ git checkout --<要撤销修改的文件名>  //工作区的
+    git checkout --<要撤销修改的文件名>  //工作区的
 
-    $ git reset HEAD <要撤销修改的文件名>  //暂存区的
+    git reset HEAD <要撤销修改的文件名>  //暂存区的
     把‘暂存区’的退到‘工作区’再用上面的命令从‘工作区’撤销修改
 
 ---
@@ -184,7 +184,7 @@ switch
 
 ## 分支合并图
 
-    $ git log --graph
+    git log --graph
 
 ## 【分支管理策略】
 
@@ -196,37 +196,37 @@ switch
 
 ## 打标签
 
-    $ git tag v1.0
+    git tag v1.0
 
-    $ git tag v0.9 f52c633  //打在之前的commitID
+    git tag v0.9 f52c633  //打在之前的commitID
 
 ## 查看标签
 
-    $ git tag 
+    git tag 
 
 ## 查看标签详情（打在什么commit上面）
 
-    $ git show <tagname>
+    git show <tagname>
 
 ## 还可以创建带说明的标签
 
-    $ git tag -a v1.0 -m "说明" <commitID>
+    git tag -a v1.0 -m "说明" <commitID>
 
 > git show <标签名> 就可以看到说明文字了
 
 ## 删除标签
 
-    $ git tag -d v1.0
+    git tag -d v1.0
 
 ## 推送标签到远程
 
-    $ git push origin v1.0
+    git push origin v1.0
 
-    $ git push origin --tags        //推全部标签
+    git push origin --tags        //推全部标签
 
 ## 删除远程标签（比较麻烦）
 
-    $ git push origin :refs/tags/v1.0  
+    git push origin :refs/tags/v1.0  
     //可以登陆GitHub查看是否删除
 
 ---
@@ -242,17 +242,17 @@ GitHub上面有很多开源的项目，可以参与开发或者修复bug，如�
 
 ## 添加多一个远程仓库
 
-    $ git remote add gitee git@gitee.com:XXGGG/test.git
+    git remote add gitee git@gitee.com:XXGGG/test.git
 
 这里‘gitee’要和之前的‘origin’不一样
 
 ## 查看当前绑定的远程库
 
-    $ git remote -v
+    git remote -v
 
 ## 删除已有的远程库
 
-    $ git remote rm origin 
+    git remote rm origin 
 
 ## 忽略的文件（不想push的文件）
 
@@ -260,11 +260,11 @@ GitHub上面有很多开源的项目，可以参与开发或者修复bug，如�
 
 ## 配置别名
 
-    $ git config --global alias st status
+    git config --global alias st status
 
 就是告诉st 就表示status
 
-    $ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ???
 
 >如果不加--global git配置文件就会放在.git/config里[alias]
@@ -278,13 +278,13 @@ GitHub上面有很多开源的项目，可以参与开发或者修复bug，如�
 ## 变基? (git rebase)
 >参考文章(廖雪峰老师)：[https://www.liaoxuefeng.com/wiki/896043488029600/1216289527823648](https://www.liaoxuefeng.com/wiki/896043488029600/1216289527823648)
 
-    $ git rebase -i <历史分支id>
+    git rebase -i <历史分支id>
 
-    $ git rebase --abort
+    git rebase --abort
 
-    $ git rebase --skip
+    git rebase --skip
 
-    $ git rebase --continue
+    git rebase --continue
 
 
 ## Q：明文保存git密码push/pull

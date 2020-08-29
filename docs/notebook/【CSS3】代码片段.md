@@ -1,21 +1,36 @@
-# 🍓CSS3 代码片段🍓
+# 🍇CSS3 代码片段🍇
 
 记录一些css3的少用基础知识，只是方便查阅。
 
 ## 【代码】
 
 ### 不同的光标 
-    cursor:pointer;
-
+```css
+cursor:pointer;
+```
 ### 高斯模糊
-    filtar:blur(20px)  
-
+```css
+filtar:blur(20px);
+```
 ### 对比度
-    filter:contrast(30);
-
+```css
+filter:contrast(30);
+```
+### 去除a标签下划线
+```css
+text-decoration:none;
+```
 
 ## 【代码片段】
 
+### 在position:fixed 下居中
+```css
+.css{
+    position:fixed
+    left: 0;
+    right: 0;
+}
+```
 ### ... 代替“溢出字”
 ```css
 .class{
@@ -26,9 +41,9 @@
 ```
 
 ### 单词/数字 不换行溢出解决办法
-
-    word-wrap: break-word;
-
+```css
+word-wrap: break-word;
+```
 ### 隐藏滚动条的方法!  
 ```css
 .note-menu::-webkit-scrollbar {     

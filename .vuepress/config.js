@@ -36,10 +36,11 @@ module.exports = {
         "text": "项目",
         "icon": "reco-api",
         "items": [
-          {"text": "🥡ԅ(¯﹃¯ԅ)🍤",  "items": [{ "text": "说明", "link": "/docs/project/"}]}, 
-          {"text": "🍖(๑•̀ㅂ•́)و✧🍥",  
+          {"text": "🍋🍋🍋🍋🍋🍋🍋",  "items": [{ "text": "【项目说明】", "link": "/docs/project/"}]}, 
+          {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
-              { "text": "💠Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'}
+              { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'},
+              { "text": "💠 Demo", "link": "https://xxggg.gitee.io/demo/","target":'_blank'}
            ]
           }
         ]
@@ -79,21 +80,32 @@ module.exports = {
     "sidebar": {
       "/docs/notebook/": [
         "",
+        "什么是知识",
         "Git",
         "SSH-公钥私钥",
-        "【什么是知识】",
-        "【HTML5】",
+        "webpack",
+        "json",
+        "npm",
+        "Ajax",
+        "css预处理器",
+
+        "flex布局",
         "【CSS3】代码片段",
+
+        "vue-cli 3",
+        "Vue-axios",
+
+        "【HTML5】",
         "【CSS3】基础知识",
         "【JavaScript】小笔记",
         "【JavaScript】大笔记",
-        "【Vue】-axios",
-        "【webpack】",
+        
         "奇奇怪怪的面试题"
       ],
       "/docs/project/": [
         "",
-        "Veronica"
+        "Veronica",
+        "Demo"
       ],
     },
     "type": "blog",

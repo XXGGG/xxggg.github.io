@@ -192,7 +192,11 @@
     @media screen {
         选择器{/*样式代码*/};
     }
+<br/>
 
+    @media screen and (max-width:600px) {
+        
+    }
 
 ## 【其他】
 ### 权重
