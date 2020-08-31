@@ -5,6 +5,7 @@
 ## 安装?!
 >跟着廖雪峰学习Git吧！  
 [https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)    
+
 **当然这只是查阅手册，没有像廖雪峰老师一样说明什么是git，GitHub**
 
 ### 我还是直接记windows的吧

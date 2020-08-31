@@ -81,18 +81,25 @@ module.exports = {
       "/docs/notebook/": [
         "",
         "什么是知识",
+        "commit规范",
         "Git",
         "SSH-公钥私钥",
         "webpack",
         "json",
         "npm",
+        "node.js",
         "Ajax",
         "css预处理器",
+        "Sass/scss",
 
         "flex布局",
         "【CSS3】代码片段",
 
+        "vue2.x",
+        "vue3.0",
         "vue-cli 3",
+        "vue-router",
+        "vue-vuex",
         "Vue-axios",
 
         "【HTML5】",

@@ -9,20 +9,27 @@
 **此知识手册是本人用于记录各种编程知识的手册 用于翻阅于记忆**  
 >（不会记得很全）
 
-- 🥝什么是知识🥝
-- 🥝Git手册🥝
-- 🥝SSH-公钥私钥🥝
-- 🥝webpack🥝
-- 🥝json🥝
-- 🥝npm🥝  
-- 🥝Ajax🥝  
-- 🥝css预处理🥝  
+- 🥝什么是知识🥝 - 🐱‍🏍
+- 🥝commit规范🥝 - 
+- 🥝Git手册🥝 - ✔
+- 🥝SSH-公钥私钥🥝 - ✔
+- 🥝webpack🥝 - ✔
+- 🥝json🥝 - ✔
+- 🥝npm🥝  - ✔
+- 🥝node.js🥝 - ✔  
+- 🥝Ajax🥝 - ✔  
+- 🥝css预处理🥝 - ✔  
+- 🥝Sass/scss🥝 - ❌ 
 ---
-- 🍇flex布局🍇
-- 🍇CSS3 代码片段🍇
+- 🍇flex布局🍇 - ✔
+- 🍇CSS3 代码片段🍇 - 🐱‍🏍
 ---
-- 🍉Vue-cli 3🍉
-- 🍉Vue-axios🍉
+- 🍉Vue2.x🍉 - ❌
+- 🍉Vue3.0🍉 - ❌
+- 🍉Vue-cli 3🍉 - ❌
+- 🍉Vue-router🍉 - ❌
+- 🍉Vue-vuex🍉 - ❌
+- 🍉Vue-axios🍉 - ❌
 ---
 - 🍓HTML5🍓
 - 🍓CSS3 基础知识🍓

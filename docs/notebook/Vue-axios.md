@@ -10,7 +10,7 @@ Github开源地址： https://github.com/axios/axios
 
 ### 安装方法
 
-    $ npm install axios
+    $ npm install axios -S
 
 ### 配置
 
@@ -24,6 +24,7 @@ Vue.prototype.axios = axios;
 ```
 
 这样就可以全局调用了
+>当然 这是vue2.x 的 
 
 ---
 
