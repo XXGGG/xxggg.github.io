@@ -90,7 +90,7 @@ module.exports = {
         "node.js",
         "Ajax",
         "css预处理器",
-        "Sass/scss",
+        "Sass",
 
         "flex布局",
         "【CSS3】代码片段",
