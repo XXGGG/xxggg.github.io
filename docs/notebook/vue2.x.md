@@ -170,11 +170,7 @@ computed: {
 ```
 >但是这个很少用到
 
-
-
-
 ## 侦听器（watch 常用）
-
 ```js
 watch: {
     // 如果 `question` 发生改变，这个函数就会运行
@@ -260,7 +256,7 @@ computed: {
 
 ### ```v-show```
 v-if  是 -> 是否有这个标签  
-v-show 是 -> 是否显示 （虽然中国东西很早就清楚了）  
+v-show 是 -> 是否显示 （虽然这个东西很早就清楚了）  
 v-show 不支持 ```<template>``` 元素  
 
 
@@ -614,10 +610,6 @@ data: function () {
 
 
 
-
-
-
-
 ## 监听子组件事件
 >在子组件的触发 -> 在父组件感知到，然后运用方法 哈哈 o(￣▽￣)ｄ
 
@@ -633,8 +625,6 @@ data: function () {
   Enlarge text
 </button>
 ```
-
-
 
 
 👇
@@ -736,6 +726,711 @@ methods: {
 
 好，那这就是关于Vue官方文档的一点点小总结 是基础的小总结，
 是基础的总结  基础的【完】
+
+---
+
+# 🍣【深入了解组件】🍚
+
+## 组件注册
+
+### 全局注册
+组件是全局注册的。也就是说它们在注册之后可以用在任何新创建的 Vue 根实例 (new Vue) 的模板中。
+
+```js
+Vue.component('component-a', { /* ... */ })
+Vue.component('component-b', { /* ... */ })
+Vue.component('component-c', { /* ... */ })
+
+new Vue({ el: '#app' })
+```
+```html 
+<div id="app">
+  <component-a></component-a>
+  <component-b></component-b>
+  <component-c></component-c>
+</div>
+```
+>就像我们的vue-cli项目里的单文件组件，都加载在#app里，当然 ```new Vue``` 是出现在入口文件main.js里的
+
+在所有子组件中也是如此，也就是说这三个组件在各自内部也都可以相互使用。
+
+### 局部注册
+全局注册往往是不够理想的。比如，如果你使用一个像 webpack 这样的构建系统，全局注册所有的组件意味着即便你已经不再使用一个组件了，它仍然会被包含在你最终的构建结果中。这造成了用户下载的 JavaScript 的无谓的增加。  
+👆 这句话很重要
+
+**注意局部注册的组件在其子组件中不可用。例如，如果你希望 ComponentA 在 ComponentB 中可用，则你需要这样写：👇**  
+```js
+var ComponentA = { /* ... */ }
+
+var ComponentB = {
+  components: {
+    'component-a': ComponentA
+  },
+  // ...
+}
+```
+>就是我们在vue-cli项目中经常看到组件引用另一个组件要做的事情。👆
+```js
+import ComponentA from './ComponentA.vue'
+
+export default {
+  components: {
+    ComponentA
+  },
+  // ...
+}
+```
+>ES6的写法👆
+
+---
+
+## 模块系统
+
+### 在模块系统中局部注册
+如果你还在阅读，说明你使用了诸如 Babel 和 webpack 的模块系统。在这些情况下，我们推荐创建一个 components 目录，并将每个组件放置在其各自的文件中。
+
+然后你需要在局部注册之前导入每个你想使用的组件。例如，在一个假设的 ComponentB.js 或 ComponentB.vue 文件中：
+```js
+import ComponentA from './ComponentA'
+import ComponentC from './ComponentC'
+
+export default {
+  components: {
+    ComponentA,
+    ComponentC
+  },
+  // ...
+}
+```
+现在 ComponentA 和 ComponentC 都可以在 ComponentB 的模板中使用了。
+
+>这就是vue-cli项目采用了webpack模板里并且使用了es6后模块化开发的效果，引入了各个组件（components）。
+
+> 用 `import` 跟 `export` 是ES6的东西，Babel是用来把es6的东西转换成es5的 es6有很多语法糖，但还暂时有一些浏览器不算完全支持，所以还是需要转换的！！ （暂时！！）未来可能不用，也有可能未来要es7转换成es6的呢 🤭
+
+## 基础组件的自动化全局注册
+如果你恰好使用了 webpack (或在内部使用了 webpack 的 Vue CLI 3+)，那么就可以使用 require.context 只全局注册这些非常通用的基础组件。这里有一份可以让你在应用入口文件 (比如 src/main.js) 中全局导入基础组件的示例代码：
+
+```js
+import Vue from 'vue'
+import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase'
+
+const requireComponent = require.context(
+  // 其组件目录的相对路径
+  './components',
+  // 是否查询其子目录
+  false,
+  // 匹配基础组件文件名的正则表达式
+  /Base[A-Z]\w+\.(vue|js)$/
+)
+
+requireComponent.keys().forEach(fileName => {
+  // 获取组件配置
+  const componentConfig = requireComponent(fileName)
+
+  // 获取组件的 PascalCase 命名
+  const componentName = upperFirst(
+    camelCase(
+      // 获取和目录深度无关的文件名
+      fileName
+        .split('/')
+        .pop()
+        .replace(/\.\w+$/, '')
+    )
+  )
+
+  // 全局注册组件
+  Vue.component(
+    componentName,
+    // 如果这个组件选项是通过 `export default` 导出的，
+    // 那么就会优先使用 `.default`，
+    // 否则回退到使用模块的根。
+    componentConfig.default || componentConfig
+  )
+})
+```
+>没有用过，有点难理解，但是可以明白，这个就是用来注册一些基本组件的，不是注册大组件的，是全局来注册一些小组件的
+
+
+---
+---
+
+## Prop
+>prop是出现在子组件中用来接收父组件传递过来的属性attribute的
+
+HTML 中的 attribute 名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符。这意味着当你使用 DOM 中的模板时，camelCase (驼峰命名法) 的 prop 名需要使用其等价的 kebab-case (短横线分隔命名) 命名:
+```js
+Vue.component('blog-post', {
+  // 在 JavaScript 中是 camelCase 的
+  props: ['postTitle'],
+  template: '<h3>{{ postTitle }}</h3>'
+})
+```
+```html
+<!-- 在 HTML 中是 kebab-case 的 -->
+<blog-post post-title="hello!"></blog-post>
+```
+使用字符串模板，那么这个限制就不存在了。
+
+
+### Prop类型
+每个 prop 都有指定的值类型。这时，你可以以对象形式列出 prop，这些 property 的名称和值分别是 prop 各自的名称和类型：
+```js
+props: {
+  title: String,
+  likes: Number,
+  isPublished: Boolean,
+  commentIds: Array,
+  author: Object,
+  callback: Function,
+  contactsPromise: Promise // or any other constructor
+}
+```
+
+### 传递静态或动态 Prop
+
+```html
+<!-- 即便 `42` 是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
+<!-- 这是一个 JavaScript 表达式而不是一个字符串。-->
+<blog-post v-bind:likes="42"></blog-post>
+```
+>其他也一样 静态的也带上` : `就好了
+
+
+### 传入一个对象的所有 property
+```js
+post: {
+  id: 1,
+  title: 'My Journey with Vue'
+}
+```
+```html
+<blog-post v-bind="post"></blog-post>
+```
+>简单的说就是前面要 传单个的 就把 它的变量名字用 👉`v-bind:变量名 = "什么什么"`  
+而如果要传送一个对象过去就 直接 `v-bind="对象名"`   
+相当于简写吧~🤭
+
+### 单向数据流
+
+父 -> 子 单向
+
+1. 这个 prop 用来传递一个初始值；这个子组件接下来希望将其作为一个本地的 prop 数据来使用。在这种情况下，最好定义一个本地的 data property 并将这个 prop 用作其初始值  
+>意思就是 在“子组件”不要去改传过来prop里的值，在data里用一个变量来保存它
+
+2. 这个 prop 以一种原始的值传入且需要进行转换。在这种情况下，最好使用这个 prop 的值来定义一个计算属性：
+
+```js
+props: ['size'],
+computed: {
+  normalizedSize: function () {
+    return this.size.trim().toLowerCase()
+  }
+}
+```
+>这个意思是 你用这个值来做事情就好了，不要改变它。想因为它的变化来做事情，可以用计算属性，这样一旦这个数变了，计算属性就会重新计算，来帮你做事。    
+（就是不希望你直接的改变props里的值 就是这么简单！ 引用就好）
+
+### Prop验证
+为了定制 prop 的验证方式，你可以为 props 中的值提供一个带有验证需求的对象，而不是一个字符串数组。例如：
+```js
+Vue.component('my-component', {
+  props: {
+    // 基础的类型检查 (`null` 和 `undefined` 会通过任何类型验证)
+    propA: Number,
+    // 多个可能的类型
+    propB: [String, Number],
+    // 必填的字符串
+    propC: {
+      type: String,
+      required: true
+    },
+    // 带有默认值的数字
+    propD: {
+      type: Number,
+      default: 100
+    },
+    // 带有默认值的对象
+    propE: {
+      type: Object,
+      // 对象或数组默认值必须从一个工厂函数获取
+      default: function () {
+        return { message: 'hello' }
+      }
+    },
+    // 自定义验证函数
+    propF: {
+      validator: function (value) {
+        // 这个值必须匹配下列字符串中的一个
+        return ['success', 'warning', 'danger'].indexOf(value) !== -1
+      }
+    }
+  }
+})
+```
+当 prop 验证失败的时候，(开发环境构建版本的) Vue 将会产生一个控制台的警告。
+
+:::
+注意那些 prop 会在一个组件实例创建之前进行验证，所以实例的 property (如 data、computed 等) 在 default 或 validator 函数中是不可用的。
+:::
+- String
+- Number
+- Boolean
+- Array
+- Object
+- Date
+- Function
+- Symbol
+
+### 非 Prop 的 Attribute
+>没怎么懂  
+
+[https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute](https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute)
+
+>先不搞懂
+
+---
+---
+## 自定义事件
+始终使用 kebab-case 的事件名。（横杠-）
+
+
+### 将原生事件绑定到组件
+你可能有很多次想要在一个组件的根元素上直接监听一个原生事件。这时，你可以使用 v-on 的 .native 修饰符：
+```html
+<base-input v-on:focus.native="onFocus"></base-input>
+```
+---
+Vue 提供了一个 $listeners property，它是一个对象，里面包含了作用在这个组件上的所有监听器。例如：
+```js
+{
+  focus: function (event) { /* ... */ }
+  input: function (value) { /* ... */ },
+}
+```
+>有点没怎么懂[https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6)
+
+
+### `.sync` 修饰符
+
+----
+----
+
+## 插槽
+
+:::
+在 2.6.0 中，我们为具名插槽和作用域插槽引入了一个新的统一的语法 (即 `v-slot` 指令)。它取代了 `slot` 和 `slot-scope` 这两个目前已被废弃但未被移除且仍在文档中的 attribute。
+:::
+
+`<slot>` `</slot>`
+
+简单的说 它的用法就是这样👇
+先在 “子组件” 中 写好一个模板 里面某个地方加上 `<slot>` `</slot>` 这个东西
+
+那么 到时候 在 “父组件”调用这个模块的时候 就可以在这个模块中加东西！（字也可以）（图片也可以）（什么代码片段都可以）（其他组件也可以）
+
+比如： （子组件）👇
+```html
+<a :href="url">
+  <slot></slot>
+</a>
+```
+然后：（在父组件）👇
+```html
+<xxg-xxg url="xxggg.gitee.io">
+  谢夏戈的博客   //👈模板中间
+</xxg-xxg>
+```
+最终渲染👇
+```html
+<a href="xxggg.gitee.io">
+  谢夏戈的博客
+</a>
+```
+>也就是说它会把 模板中间的东西 带到 `<solt>` 这个地方
+
+
+### 编译作用域
+略......
+
+### 后备内容
+有时为一个插槽设置具体的后备 (也就是默认的) 内容是很有用的，它只会在没有提供内容的时候被渲染
+
+
+```html
+<button type="submit">
+  <slot>Submit</slot>
+</button>
+```
+
+默认的 就是在`<slot>` 标签中间加上默认的信息就可以了！！
+
+当然 如果插值有东西  那就会顶替掉默认的
+
+### 具名插槽
+自 2.6.0 起有所更新。已废弃的使用 slot attribute 的语法。
+
+## 算了 插槽这一pa 先过 ❌
+后面补[https://cn.vuejs.org/v2/guide/components-slots.html](https://cn.vuejs.org/v2/guide/components-slots.html)
+
+
+## 动态组件 & 异步组件
+
+### 在动态组件上使用 keep-alive
+
+我们之前曾经在一个多标签的界面中使用 is attribute 来切换不同的组件：
+```html
+<component v-bind:is="currentTabComponent"></component>
+```
+当在这些组件之间切换的时候，你有时会想保持这些组件的状态，以避免反复重渲染导致的性能问题。
+```html
+<!-- 失活的组件将会被缓存！-->
+<keep-alive>
+  <component v-bind:is="currentTabComponent"></component>
+</keep-alive>
+```
+:::
+注意这个 `<keep-alive>` 要求被切换到的组件都有自己的名字，不论是通过组件的 name 选项还是局部/全局注册。
+:::
+
+### 异步组件 ❌
+### 处理加载状态 ❌
+## 处理边界情况 ❌
+
+### 访问根实例 $root
+
+在每个 new Vue 实例的子组件中，其根实例可以通过 $root property 进行访问。例如，在这个根实例中：  
+```js
+// Vue 根实例
+new Vue({
+  data: {
+    foo: 1
+  },
+  computed: {
+    bar: function () { /* ... */ }
+  },
+  methods: {
+    baz: function () { /* ... */ }
+  }
+})
+```
+所有的子组件都可以将这个实例作为一个全局 store 来访问或使用。
+```js
+// 获取根组件的数据
+this.$root.foo
+
+// 写入根组件的数据
+this.$root.foo = 2
+
+// 访问根组件的计算属性
+this.$root.bar
+
+// 调用根组件的方法
+this.$root.baz()
+```
+
+
+### 访问父级组件实例
+和 `$root` 类似，`$parent` property 可以用来从一个子组件访问父组件的实例。它提供了一种机会，可以在后期随时触达父级组件，以替代将数据以 prop 的方式传入子组件的方式。
+
+
+
+
+### 访问子组件实例或子元素
+尽管存在 prop 和事件，有的时候你仍可能需要在 JavaScript 里直接访问一个子组件。为了达到这个目的，你可以通过 ref 这个 attribute 为子组件赋予一个 ID 引用。例如：
+```html
+<base-input ref="usernameInput"></base-input>
+```
+```js
+this.$refs.usernameInput
+```
+:::
+$refs 只会在组件渲染完成之后生效，并且它们不是响应式的。这仅作为一个用于直接操作子组件的“逃生舱”——你应该避免在模板或计算属性中访问 $refs。
+:::
+
+
+---
+---
+
+# 🍔【过渡&动画】🌭
+
+## 进入/离开 & 列表过渡👇
+
+### 单元素/组件的过渡
+
+Vue 提供了 transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡
+
+- 条件渲染 (使用 v-if)
+- 条件展示 (使用 v-show)
+- 动态组件
+- 组件根节点
+
+```html
+<div id="demo">
+  <transition name="fade">
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+```
+```css
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+```
+1. `v-enter`：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。
+
+2. `v-enter-active`：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。
+
+3. `v-enter-to`：2.1.8 版及以上定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 `v-enter` 被移除)，在过渡/动画完成之后移除。
+
+4. `v-leave`：定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。
+
+5. `v-leave-active`：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。
+
+6. `v-leave-to`：2.1.8 版及以上定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 `v-leave` 被删除)，在过渡/动画完成之后移除。
+
+> `v-` 是默认的，如果有`<标签>`的name 那就要用 name的 name-enter 这样的方式
+
+
+### 自定义过渡的类名
+
+- enter-class
+- enter-active-class
+- enter-to-class (2.1.8+)
+- leave-class
+- leave-active-class
+- leave-to-class (2.1.8+)
+
+>这个可以结合动画库  
+比如👇 
+```html
+<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+
+<div id="example-3">
+  <transition
+    name="custom-classes-transition"
+    enter-active-class="animated tada"
+    leave-active-class="animated bounceOutRight"
+  >
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+```
+
+### 显性的过渡持续时间
+在这种情况下你可以用 `<transition>` 组件上的 duration prop 定制一个显性的过渡持续时间 (以毫秒计)：
+```html
+<transition :duration="1000">...</transition>
+```
+你也可以定制进入和移出的持续时间：
+```html
+<transition :duration="{ enter: 500, leave: 800 }">...</transition>
+```
+
+
+
+### JavaScript 钩子
+可以在 attribute 中声明 JavaScript 钩子
+```html
+<transition
+  v-on:before-enter="beforeEnter"
+  v-on:enter="enter"
+  v-on:after-enter="afterEnter"
+  v-on:enter-cancelled="enterCancelled"
+
+  v-on:before-leave="beforeLeave"
+  v-on:leave="leave"
+  v-on:after-leave="afterLeave"
+  v-on:leave-cancelled="leaveCancelled"
+>
+  <!-- ... -->
+</transition>
+```
+```js
+// ...
+methods: {
+  // --------
+  // 进入中
+  // --------
+
+  beforeEnter: function (el) {
+    // ...
+  },
+  // 当与 CSS 结合使用时
+  // 回调函数 done 是可选的
+  enter: function (el, done) {
+    // ...
+    done()
+  },
+  afterEnter: function (el) {
+    // ...
+  },
+  enterCancelled: function (el) {
+    // ...
+  },
+
+  // --------
+  // 离开时
+  // --------
+
+  beforeLeave: function (el) {
+    // ...
+  },
+  // 当与 CSS 结合使用时
+  // 回调函数 done 是可选的
+  leave: function (el, done) {
+    // ...
+    done()
+  },
+  afterLeave: function (el) {
+    // ...
+  },
+  // leaveCancelled 只用于 v-show 中
+  leaveCancelled: function (el) {
+    // ...
+  }
+}
+```
+这些钩子函数可以结合 CSS transitions/animations 使用，也可以单独使用。
+
+:::
+当只用 JavaScript 过渡的时候，在 enter 和 leave 中必须使用 done 进行回调。否则，它们将被同步调用，过渡会立即完成。
+:::
+
+## 更多动画效果 ❌
+[https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1](https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1)
+
+在demo里练习一哈
+
+
+# 【可复用性&组合】 ❌
+
+## 混入❌
+## 自定义指令❌
+## 渲染函数&JSX❌
+## 插件
+插件通常用来为 Vue 添加全局功能。插件的功能范围没有严格的限制——一般有下面几种：
+
+1. 添加全局方法或者 property。如：vue-custom-element
+
+2. 添加全局资源：指令/过滤器/过渡等。如 vue-touch
+
+3. 通过全局混入来添加一些组件选项。如 vue-router
+
+4. 添加 Vue 实例方法，通过把它们添加到 Vue.prototype 上实现。
+
+5. 一个库，提供自己的 API，同时提供上面提到的一个或多个功能。如 vue-router
+
+>第四个就是添加到原型上 “prototype” （虽然我还不懂什么是原型）
+在axios插件的使用上就是把axios添加到原型上Vue.prototype.$axios = axios 
+但是在vue3.0以上 没有暴露Vue 而是createApp
+
+>而在element-ui里 全局使用插件则是用Vue.use(ElementUI);
+
+
+### 使用插件
+通过全局方法 Vue.use() 使用插件。它需要在你调用 new Vue() 启动应用之前完成：
+```js
+// 调用 `MyPlugin.install(Vue)`
+Vue.use(MyPlugin)
+
+new Vue({
+  // ...组件选项
+})
+```
+```js
+Vue.use(MyPlugin, { someOption: true })
+```
+
+### 开发插件
+Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参数是 Vue 构造器，第二个参数是一个可选的选项对象：  
+
+
+
+
+## 过滤器
+```html
+<!-- 在双花括号中 -->
+{{ message | capitalize }}
+
+<!-- 在 `v-bind` 中 -->
+<div v-bind:id="rawId | formatId"></div>
+```
+
+`filters` 过滤器
+```js
+filters: {
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+}
+```
+或者在创建 Vue 实例之前全局定义过滤器：（这个没怎么用过）
+```js
+Vue.filter('capitalize', function (value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
+
+new Vue({
+  // ...
+})
+```
+>设置一个全局的过滤器，这个Vue就是全局，然后有一个Vue.filter的过滤器，给这个过滤器起一个名字capitalize，然后设置一个方法。
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 【工具】
+## 单文件组件
+export default 和 module.exports :  
+都属于导出模块
+
+但是有点区别 exports 是module模块的一个属性 exports变量是指向module.exports，加载模块实际是加载该模块的module.exports 一般为require导入
+
+export default命令，为模块指定默认输出,默认导出一个整体接口 一般为import导入
+
+>其实官方文档已经说得很好了！ 比如下面这段话 👇
+v/
+### 怎么看待关注点分离？
+一个重要的事情值得注意，**关注点分离不等于文件类型分离**。在现代 UI 开发中，我们已经发现相比于把代码库分离成三个大的层次并将其相互交织起来，把它们划分为松散耦合的组件再将其组合起来更合理一些。在一个组件里，其模板、逻辑和样式是内部耦合的，并且把他们搭配在一起实际上使得组件更加内聚且更可维护。
+
+---
+
+
+## ❌单元测试
+
+❌不知道什么单元测试 暂时看不懂
+
+## ❌TypeScript 支持
+
+## 生产环境部署
+[https://cn.vuejs.org/v2/guide/deployment.html](https://cn.vuejs.org/v2/guide/deployment.html)
+
+
+# 【规模化】
+>一个是路由，用vue-router就好了 后面可以慢慢理解
+
+>一个是状态管理 也是官方推荐是 vuex 
+
+>一个是服务器渲染 - SSR  
+Nuxt.js
 
 
 
