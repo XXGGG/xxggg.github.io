@@ -40,7 +40,8 @@ module.exports = {
           {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
               { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'},
-              { "text": "💠 Demo", "link": "https://xxggg.gitee.io/demo/","target":'_blank'}
+              { "text": "💠 vue3-demo", "link": "https://xxggg.gitee.io/demo/","target":'_blank'},
+              { "text": "💠 vue2-demo", "link": "https://xxggg.gitee.io/vue2-demo/","target":'_blank'}
            ]
           }
         ]
