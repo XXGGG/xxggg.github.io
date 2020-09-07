@@ -1,29 +1,30 @@
 # 🍇CSS3 代码片段🍇
 
 记录一些css3的少用基础知识，只是方便查阅。
+🟢🔵🟡🔴
 
 ## 【代码】
 
-### 不同的光标 
+### 🟢 不同的光标 
 ```css
 cursor:pointer;
 ```
-### 高斯模糊
+### 🔵 高斯模糊
 ```css
 filtar:blur(20px);
 ```
-### 对比度
+### 🔵 对比度
 ```css
 filter:contrast(30);
 ```
-### 去除a标签下划线
+### 🟢 去除a标签下划线
 ```css
 text-decoration:none;
 ```
 
 ## 【代码片段】
 
-### 在position:fixed 下居中
+### 🔵 在position:fixed 下居中
 ```css
 .css{
     position:fixed
@@ -31,7 +32,7 @@ text-decoration:none;
     right: 0;
 }
 ```
-### ... 代替“溢出字”
+### 🔵 ... 代替“溢出字”
 ```css
 .class{
     overflow: hidden;
@@ -40,7 +41,7 @@ text-decoration:none;
 }
 ```
 
-### 单词/数字 不换行溢出解决办法
+### 🔵 单词/数字 不换行溢出解决办法
 ```css
 word-wrap: break-word;
 ```
@@ -51,7 +52,7 @@ word-wrap: break-word;
 }
 ```
 
-### 清除浮动代码 
+### 🔵 清除浮动代码 
 ```css
 .clearfix:after {
     display:block;
@@ -59,7 +60,6 @@ word-wrap: break-word;
     clear:both;
     height:0;
 }
-
 .clearfix {
     zoom: 1;
 }

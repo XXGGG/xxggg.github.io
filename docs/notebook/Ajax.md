@@ -1,6 +1,6 @@
 # 🥝AJAX🥝
 
-## 〖提前总结〗
+## 🟢〖提前总结〗
 其实只要知道ajax是（异步的js和xml）就好了，
 
 可以理解ajax就是在不重新加载页面的情况下，用js请求来的数据渲染一下新的页面，
@@ -10,14 +10,15 @@
 所谓的XMLHttpRequest 就是发送数据/请求数据用的
 
 
-对于vue 之前官方推荐的就是axios 也就是vue-axios...   
-👇ajax、axios、fetch的区别  
+对于vue 之前官方推荐的就是axios 也就是vue-axios...  
+
+👇ajax、axios、fetch的区别   
 [https://www.jianshu.com/p/8bc48f8fde75](https://www.jianshu.com/p/8bc48f8fde75)
 
 ---
->参考文章：[https://www.runoob.com/ajax/ajax-tutorial.html](https://www.runoob.com/ajax/ajax-tutorial.html)
+参考文章：[https://www.runoob.com/ajax/ajax-tutorial.html](https://www.runoob.com/ajax/ajax-tutorial.html)
 
-## 什么是Ajax
+## 🔵 什么是Ajax
 - AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。  
 - AJAX 不是新的编程语言，而是一种使用现有标准的新方法。  
 - AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。  
@@ -26,17 +27,17 @@
 >通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
 传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。
 
-## AJAX - 创建 XMLHttpRequest 对象
+## 🔵 AJAX - 创建 XMLHttpRequest 对象
 
 **XMLHttpRequest 是 AJAX 的基础。**
 >所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。
-### 创建 XMLHttpRequest 对象
+#### 创建 XMLHttpRequest 对象
 >不参考老浏览器的办法（IE5和IE6）
 ```js
 var xhr = new XMLHttpRequest();
 ```
 
-### XMLHttpRequest - 向服务器发送请求请求
+#### XMLHttpRequest - 向服务器发送请求请求
 
 后面的 true 表示 是否异步（一般填true就可以了）
 ```js
@@ -55,7 +56,7 @@ xhr.send();
 // 通过 GET 方法发送信息，请向 URL 添加信息
 ```
 ---
-### POST
+#### POST
 ```js
 xhr.open("POST","/try/ajax/demo_get.php" ,true);
 xhr.send();
@@ -73,7 +74,7 @@ AJAX 指的是**异步** JavaScript 和 XML（Asynchronous JavaScript and XML）
 XMLHttpRequest 对象如果要用于 AJAX 的话，其 open() 方法的 async 参数必须设置为 true 
 
 ---
-### 服务器响应
+#### 服务器响应
 如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。
 
 - responseText  获得字符串形式的响应数据。
@@ -99,7 +100,7 @@ document.getElementById("myDiv").innerHTML=txt;
 
 ---
 
-### onreadystatechange 事件
+#### onreadystatechange 事件
 当请求被发送到服务器时，我们需要执行一些基于响应的任务。  
 每当 readyState 改变时，就会触发 onreadystatechange 事件。  
 readyState 属性存有 XMLHttpRequest 的状态信息。  
@@ -125,7 +126,7 @@ xhr.onreadystatechange=function(){
 
 
 
-## 【结束】
+## 🐷【结束】
 对于Ajax 还是知道个概念
 大概就是从后台请求数据来，然后这把去渲染页面，
 最关键的还是请求数据。🐽

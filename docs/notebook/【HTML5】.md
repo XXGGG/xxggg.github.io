@@ -1,6 +1,6 @@
 # 🍓HTML5🍓
 
-## sessionStorage
+## 🔵 sessionStorage
 
 ### 保存数据语法：
 ```js
@@ -24,7 +24,7 @@ sessionStorage.clear();
 ```
 ---
 
-## localStorage
+## 🔵 localStorage
 
 ### 保存数据语法：
 ```js

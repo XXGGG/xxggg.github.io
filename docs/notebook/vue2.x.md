@@ -5,13 +5,13 @@
 ```property```  :属性、性质、财产、(可以理解为在js里定义的值)       
 ```Attribute```  :属性、特质、(可以理解为在html标签的属性)    
 
-# 【基础】👇
+# 🟢【基础】👇
 略......
 >直接看官方文档👉[https://cn.vuejs.org/v2/guide/instance.html](https://cn.vuejs.org/v2/guide/instance.html)
 
 ---
 
-## 父子传值：父 -> 子 （常用）
+## 🟢 父子传值：父 -> 子 （常用）
 在子👇
 ```js
 props:['todo']  // "prop"，类似于一个自定义 attribute。
@@ -25,7 +25,7 @@ props:['todo']  // "prop"，类似于一个自定义 attribute。
 
 ---
 
-## Vue暴露的实例与方法 （关于api）
+##🔵  Vue暴露的实例与方法 （关于api）
 除了数据 property，Vue 实例还暴露了一些有用的实例 property 与方法。它们都有前缀 $，以便与用户定义的 property 区分开来。例如：
 ```js
 var data = { a: 1 }
@@ -51,7 +51,7 @@ vue-cli生成的项目脚手架里，通过webpack配置很好的处理了这些
 **在vue-cli中要用this.$data 这样来得到vue的api**
 
 
-## 生命周期钩子（常用）
+## 🟢 生命周期钩子（常用）
 👇就是这些 特定时候触发的钩子 整个网页生成、更新、销毁...的时候  
 ```created``` ```mounted```  ```updated``` 等等......
 
@@ -67,7 +67,7 @@ vue-cli生成的项目脚手架里，通过webpack配置很好的处理了这些
 ---
 
 
-## 动态参数 (2.6.0 新增的)
+## 🟡 动态参数 (2.6.0 新增的)
 ::: tip
 2.6.0 新增
 :::
@@ -76,7 +76,7 @@ vue-cli生成的项目脚手架里，通过webpack配置很好的处理了这些
 ```
 如果你的 Vue 实例有一个 data property attributeName，其值为 "href"，那么这个绑定将等价于 v-bind:href
 
-## 修饰符
+## 🟡 修饰符
 ```html
 <form v-on:submit.prevent="onSubmit">...</form>
 ```
@@ -86,7 +86,7 @@ vue-cli生成的项目脚手架里，通过webpack配置很好的处理了这些
 ---
 
 
-## 计算属性（常用）
+## 🟢 计算属性（常用）
 ```js
 computed: {
     // 计算属性的 getter
@@ -150,7 +150,7 @@ var vm = new Vue({
 ```
 好得多了，不是吗？ o(￣▽￣)ｄ
 
-### 3、计算属性的 setter （少用）
+### 🟡 3、计算属性的 setter （少用）
 计算属性默认只有 getter，不过在需要时你也可以提供一个 setter：
 ```js
 computed: {
@@ -170,7 +170,7 @@ computed: {
 ```
 >但是这个很少用到
 
-## 侦听器（watch 常用）
+## 🔵 侦听器（watch 常用）
 ```js
 watch: {
     // 如果 `question` 发生改变，这个函数就会运行
@@ -194,9 +194,9 @@ watch: {
 ---
 
 
-## Class与Style的动态绑定（常用）
+## 🟢 Class与Style的动态绑定（常用）
 
-### 对象语法
+### 🟢 对象语法
 >直接上例子吧
 ```html
 <div v-bind:class="{ active: isActive }"></div>
@@ -223,11 +223,11 @@ computed: {
 
 >[1] truthy 不是 true，详见 MDN 的解释。truthy是真值，意思就是有值。
 
-### 自动添加前缀 （！！！）
+### ❗ 自动添加前缀 （！！！）
 当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS property 时，如 transform，Vue.js 会自动侦测并添加相应的前缀。
 
 
-### 多重值（少用）
+### 🟡 多重值（少用）
 ```html
 <div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>
 ```
@@ -235,7 +235,7 @@ computed: {
 
 ---
 
-## 条件渲染
+## 🟢 条件渲染 🟢
 ```v-if``` ```v-else-if``` ```v-else``` 这些
 
 ### 在 ```<template>``` 元素上使用 ```v-if``` 条件渲染分组
@@ -254,28 +254,28 @@ computed: {
 [https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0](https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0)
 
 
-### ```v-show```
+### 🟢 ```v-show``` 🟢
 v-if  是 -> 是否有这个标签  
 v-show 是 -> 是否显示 （虽然这个东西很早就清楚了）  
 v-show 不支持 ```<template>``` 元素  
 
 
-### ```v-if``` 与 ```v-for``` 一起使用
+### 🟢 ```v-if``` 与 ```v-for``` 一起使用
 
 ::: 
 不推荐同时使用 v-if 和 v-for
 :::
-
+>但我还是会用 嘟嘟嘴🐷 偶尔~
 
 ---
 
 
-## 列表渲染
+## 🟢 列表渲染 🟢
 👉 ```v-for```  
 👉 ```item in items```   
 你也可以用 of 替代 in 作为分隔符，因为它更接近 JavaScript 迭代器的语法：
 
-### 在 ```v-for``` 里使用对象
+### 🟢 在 ```v-for``` 里使用对象
 会遍历出：值  
 
 当然 可以带上key键 比如：
@@ -287,7 +287,7 @@ v-show 不支持 ```<template>``` 元素
 还可以带上👆index 索引 o(￣▽￣)ｄ
 
 
-### 数组更新检测
+### 🟢 数组更新检测
 
 #### 变更方法
 Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：
@@ -303,7 +303,7 @@ Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会�
 变更方法，顾名思义，会变更调用了这些方法的原始数组。相比之下，也有非变更方法，例如 ```filter()```、```concat()``` 和 ```slice()```。它们不会变更原始数组，而总是返回一个新数组。当使用非变更方法时，可以用新数组替换旧数组：
 
 
-## 显示过滤/排序后的结果
+## 🟢 显示过滤/排序后的结果
 >举个例子 我想把 ```[3,8,4,1]``` 按顺序来排列
 但是不想变更原来的这组数据，那就用“计算属性”！👇
 ```js
@@ -319,7 +319,7 @@ computed: {
 
 ---
 
-## 事件处理
+## 🟢 事件处理 🟢
 ```v-on```简写 - ```@```  
 
 其他的就不记了
@@ -344,7 +344,7 @@ methods: {
 }
 ```
 
-### 事件修饰符 (少用)
+### 🔵 事件修饰符 (少用)
 在事件处理程序中调用 `event.preventDefault()` 或 `event.stopPropagation()` 是非常常见的需求。尽管我们可以在方法中轻松实现这点，但更好的方式是：方法只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。
 
 为了解决这个问题，Vue.js 为 `v-on` 提供了事件修饰符。之前提过，修饰符是由点开头的指令后缀来表示的。
@@ -379,11 +379,11 @@ methods: {
 <div v-on:click.self="doThat">...</div>
 ```
 
-####  once - 点击事件将只会触发一次 
+#### 🔵  once - 点击事件将只会触发一次 
 ```html
 <a v-on:click.once="doThis"></a>
 ```
-#### passive
+#### 🔵 passive
 Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符。
 ```html
 <!-- 滚动事件的默认行为 (即滚动行为) 将会立即触发 -->
@@ -402,7 +402,7 @@ Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符
 ---
 
 
-### 按键修饰符
+### 🔵 按键修饰符
 在监听键盘事件时，我们经常需要检查详细的按键。Vue 允许为 ```v-on``` 在监听键盘事件时添加按键修饰符：
 ```html
 <!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
@@ -414,7 +414,7 @@ Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符
 在上述示例中，处理函数只会在 $event.key 等于 PageDown 时被调用。
 ```
 
-### 按键码别名：(这些修饰符都蛮少用的)
+### 🔵 按键码别名：(这些修饰符都蛮少用的)
 ```html
 <input v-on:keyup.enter="submit">
 ```
@@ -428,7 +428,7 @@ Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符
 - .left
 - .right
 
-### 系统修饰键 (这些修饰符都蛮少用的)
+### 🔵 系统修饰键 (这些修饰符都蛮少用的)
 可以用如下修饰符来实现仅在按下相应按键时才触发鼠标或键盘事件的监听器。
 
 - .ctrl
@@ -440,7 +440,7 @@ Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符
 请注意修饰键与常规按键不同，在和 ```keyup``` 事件一起用时，事件触发时修饰键必须处于按下状态。换句话说，只有在按住 ```ctrl``` 的情况下释放其它按键，才能触发 ```keyup.ctrl```。而单单释放 ```ctrl``` 也不会触发事件。如果你想要这样的行为，请为 ```ctrl``` 换用 ```keyCode```：```keyup.17```。
 :::
 
-### .exact 修饰符 (这些修饰符都蛮少用的)
+### 🔵 .exact 修饰符 (这些修饰符都蛮少用的)
 .exact 修饰符允许你控制由精确的系统修饰符组合触发的事件。
 ```html
 <!-- 即使 Alt 或 Shift 被一同按下时也会触发 -->
@@ -453,7 +453,7 @@ Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符
 <button v-on:click.exact="onClick">A</button>
 ```
 
-### 鼠标按钮修饰符 (这些修饰符都蛮少用的)
+### 🔵 鼠标按钮修饰符 (这些修饰符都蛮少用的)
 > 有了事件修饰符，键盘修饰符，那就肯定有鼠标修饰符啦！！！
 
 - .left
@@ -477,11 +477,11 @@ Vue 还对应 addEventListener 中的 passive 选项提供了 .passive 修饰符
 ----
 -----
 
-## 表单输入绑定
+## 🟢 表单输入绑定 🟢
 ```v-model``` 
-基础 - 略
+【基础】 - 略......
 
-### 复选框
+###  🟢 复选框
 多个复选框，绑定到同一个数组：
 ```html
 <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
@@ -503,7 +503,7 @@ new Vue({
 ```
 选中的就会在 checkedNames中多一个value值出来。
 
-### 单选
+### 🟢 单选
 ```html
 <div id="example-4">
   <input type="radio" id="one" value="One" v-model="picked">
@@ -524,7 +524,7 @@ new Vue({
 })
 ```
 
-### 选择框
+### 🟢 选择框
 #### 单选选择框
 ```html
 <div id="example-5">
@@ -550,7 +550,7 @@ new Vue({
 如果 `v-model` 表达式的初始值未能匹配任何选项，`<select>` 元素将被渲染为“未选中”状态。在 iOS 中，这会使用户无法选择第一个选项。因为这样的情况下，iOS 不会触发 change 事件。因此，更推荐像上面这样提供一个值为空的禁用选项。
 :::
 
-### 值绑定
+### 🟢 值绑定
 #### 复选框
 ```html
 <input
@@ -565,7 +565,7 @@ new Vue({
 <input type="radio" v-model="pick" v-bind:value="a">
 ```
 
-### 修饰符 (！！！)
+### 🔵 修饰符 (！！！)
 
 #### `.lazy`
 在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转为在 change 事件_之后_进行同步：
@@ -593,7 +593,7 @@ new Vue({
 
 --- 
 
-## 组件基础
+## 🐷 组件基础 🐷 
 
 略略略...
 
@@ -610,7 +610,7 @@ data: function () {
 
 
 
-## 监听子组件事件
+## 🟢 监听子组件事件
 >在子组件的触发 -> 在父组件感知到，然后运用方法 哈哈 o(￣▽￣)ｄ
 
 在父组件中：👇设置一个按钮 只不过这个按钮的触发器在 子组件里
@@ -625,7 +625,6 @@ data: function () {
   Enlarge text
 </button>
 ```
-
 
 👇
 还可以带值
@@ -661,7 +660,7 @@ methods: {
 }
 ```
 
-## 在组件上使用 v-model
+## 🔵 在组件上使用 v-model
 
 >详细请参考官方文档：[https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model](https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model)
 
@@ -673,7 +672,7 @@ methods: {
 ---
 
 
-## 通过插槽分发内容
+## 🔵 通过插槽分发内容
 
 ```<slot></slot>```
 
@@ -701,7 +700,7 @@ methods: {
 ```
 
 
-## 解析 DOM 模板时的注意事项
+## 🐷 解析 DOM 模板时的注意事项
 有些 HTML 元素，诸如``` <ul>、<ol>、<table> 和 <select>，```对于哪些元素可以出现在其内部是有严格限制的。而有些元素，诸如 ```<li>、<tr> 和 <option>，```只能出现在其它某些特定的元素内部。
 
 这会导致我们使用这些有约束条件的元素时遇到一些问题。例如：
@@ -722,7 +721,7 @@ methods: {
 
 哦 那没事了！
 
-## 【完】- 〖基础的完〗
+## 🐷 【完】- 〖基础的完〗 🐷
 
 好，那这就是关于Vue官方文档的一点点小总结 是基础的小总结，
 是基础的总结  基础的【完】
@@ -731,7 +730,7 @@ methods: {
 
 # 🍣【深入了解组件】🍚
 
-## 组件注册
+## 🟢 组件注册
 
 ### 全局注册
 组件是全局注册的。也就是说它们在注册之后可以用在任何新创建的 Vue 根实例 (new Vue) 的模板中。
@@ -754,7 +753,7 @@ new Vue({ el: '#app' })
 
 在所有子组件中也是如此，也就是说这三个组件在各自内部也都可以相互使用。
 
-### 局部注册
+### 🟢 局部注册
 全局注册往往是不够理想的。比如，如果你使用一个像 webpack 这样的构建系统，全局注册所有的组件意味着即便你已经不再使用一个组件了，它仍然会被包含在你最终的构建结果中。这造成了用户下载的 JavaScript 的无谓的增加。  
 👆 这句话很重要
 
@@ -784,7 +783,7 @@ export default {
 
 ---
 
-## 模块系统
+## 🔵 模块系统
 
 ### 在模块系统中局部注册
 如果你还在阅读，说明你使用了诸如 Babel 和 webpack 的模块系统。在这些情况下，我们推荐创建一个 components 目录，并将每个组件放置在其各自的文件中。
@@ -808,7 +807,7 @@ export default {
 
 > 用 `import` 跟 `export` 是ES6的东西，Babel是用来把es6的东西转换成es5的 es6有很多语法糖，但还暂时有一些浏览器不算完全支持，所以还是需要转换的！！ （暂时！！）未来可能不用，也有可能未来要es7转换成es6的呢 🤭
 
-## 基础组件的自动化全局注册
+## 🟡 基础组件的自动化全局注册
 如果你恰好使用了 webpack (或在内部使用了 webpack 的 Vue CLI 3+)，那么就可以使用 require.context 只全局注册这些非常通用的基础组件。这里有一份可以让你在应用入口文件 (比如 src/main.js) 中全局导入基础组件的示例代码：
 
 ```js
@@ -856,7 +855,7 @@ requireComponent.keys().forEach(fileName => {
 ---
 ---
 
-## Prop
+## 🔵 Prop
 >prop是出现在子组件中用来接收父组件传递过来的属性attribute的
 
 HTML 中的 attribute 名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符。这意味着当你使用 DOM 中的模板时，camelCase (驼峰命名法) 的 prop 名需要使用其等价的 kebab-case (短横线分隔命名) 命名:
@@ -874,7 +873,7 @@ Vue.component('blog-post', {
 使用字符串模板，那么这个限制就不存在了。
 
 
-### Prop类型
+### 🔵 Prop类型
 每个 prop 都有指定的值类型。这时，你可以以对象形式列出 prop，这些 property 的名称和值分别是 prop 各自的名称和类型：
 ```js
 props: {
@@ -888,7 +887,7 @@ props: {
 }
 ```
 
-### 传递静态或动态 Prop
+### 🔵 传递静态或动态 Prop
 
 ```html
 <!-- 即便 `42` 是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
@@ -912,7 +911,7 @@ post: {
 而如果要传送一个对象过去就 直接 `v-bind="对象名"`   
 相当于简写吧~🤭
 
-### 单向数据流
+### 🔵 单向数据流
 
 父 -> 子 单向
 
@@ -932,7 +931,7 @@ computed: {
 >这个意思是 你用这个值来做事情就好了，不要改变它。想因为它的变化来做事情，可以用计算属性，这样一旦这个数变了，计算属性就会重新计算，来帮你做事。    
 （就是不希望你直接的改变props里的值 就是这么简单！ 引用就好）
 
-### Prop验证
+### 🔵 Prop验证
 为了定制 prop 的验证方式，你可以为 props 中的值提供一个带有验证需求的对象，而不是一个字符串数组。例如：
 ```js
 Vue.component('my-component', {
@@ -983,12 +982,12 @@ Vue.component('my-component', {
 - Function
 - Symbol
 
-### 非 Prop 的 Attribute
->没怎么懂  
+### 🔴 非 Prop 的 Attribute
+>🔴没怎么懂  
 
 [https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute](https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute)
 
->先不搞懂
+>🔴先不搞懂
 
 ---
 ---
@@ -996,7 +995,7 @@ Vue.component('my-component', {
 始终使用 kebab-case 的事件名。（横杠-）
 
 
-### 将原生事件绑定到组件
+### 🔵 将原生事件绑定到组件
 你可能有很多次想要在一个组件的根元素上直接监听一个原生事件。这时，你可以使用 v-on 的 .native 修饰符：
 ```html
 <base-input v-on:focus.native="onFocus"></base-input>
@@ -1017,7 +1016,7 @@ Vue 提供了一个 $listeners property，它是一个对象，里面包含了�
 ----
 ----
 
-## 插槽
+## 🔵 插槽
 
 :::
 在 2.6.0 中，我们为具名插槽和作用域插槽引入了一个新的统一的语法 (即 `v-slot` 指令)。它取代了 `slot` 和 `slot-scope` 这两个目前已被废弃但未被移除且仍在文档中的 attribute。
@@ -1054,7 +1053,7 @@ Vue 提供了一个 $listeners property，它是一个对象，里面包含了�
 ### 编译作用域
 略......
 
-### 后备内容
+### 🔵 后备内容
 有时为一个插槽设置具体的后备 (也就是默认的) 内容是很有用的，它只会在没有提供内容的时候被渲染
 
 
@@ -1068,16 +1067,16 @@ Vue 提供了一个 $listeners property，它是一个对象，里面包含了�
 
 当然 如果插值有东西  那就会顶替掉默认的
 
-### 具名插槽
+### 🔴 具名插槽
 自 2.6.0 起有所更新。已废弃的使用 slot attribute 的语法。
 
-## 算了 插槽这一pa 先过 ❌
+## 🔴 算了 插槽这一pa 先过 ❌
 后面补[https://cn.vuejs.org/v2/guide/components-slots.html](https://cn.vuejs.org/v2/guide/components-slots.html)
 
 
-## 动态组件 & 异步组件
+## 🔵 动态组件 & 异步组件
 
-### 在动态组件上使用 keep-alive
+### 🔵 在动态组件上使用 keep-alive
 
 我们之前曾经在一个多标签的界面中使用 is attribute 来切换不同的组件：
 ```html
@@ -1094,11 +1093,11 @@ Vue 提供了一个 $listeners property，它是一个对象，里面包含了�
 注意这个 `<keep-alive>` 要求被切换到的组件都有自己的名字，不论是通过组件的 name 选项还是局部/全局注册。
 :::
 
-### 异步组件 ❌
-### 处理加载状态 ❌
-## 处理边界情况 ❌
+### 🔴 异步组件 ❌
+### 🔴 处理加载状态 ❌
+## 🔴 处理边界情况 ❌
 
-### 访问根实例 $root
+### 🟡 访问根实例 $root
 
 在每个 new Vue 实例的子组件中，其根实例可以通过 $root property 进行访问。例如，在这个根实例中：  
 ```js
@@ -1131,13 +1130,13 @@ this.$root.baz()
 ```
 
 
-### 访问父级组件实例
+### 🟡 访问父级组件实例
 和 `$root` 类似，`$parent` property 可以用来从一个子组件访问父组件的实例。它提供了一种机会，可以在后期随时触达父级组件，以替代将数据以 prop 的方式传入子组件的方式。
 
 
 
 
-### 访问子组件实例或子元素
+### 🔵 访问子组件实例或子元素
 尽管存在 prop 和事件，有的时候你仍可能需要在 JavaScript 里直接访问一个子组件。为了达到这个目的，你可以通过 ref 这个 attribute 为子组件赋予一个 ID 引用。例如：
 ```html
 <base-input ref="usernameInput"></base-input>
@@ -1155,9 +1154,9 @@ $refs 只会在组件渲染完成之后生效，并且它们不是响应式的�
 
 # 🍔【过渡&动画】🌭
 
-## 进入/离开 & 列表过渡👇
+## 🔵 进入/离开 & 列表过渡👇
 
-### 单元素/组件的过渡
+### 🔵 单元素/组件的过渡
 
 Vue 提供了 transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡
 
@@ -1196,7 +1195,7 @@ Vue 提供了 transition 的封装组件，在下列情形中，可以给任何�
 > `v-` 是默认的，如果有`<标签>`的name 那就要用 name的 name-enter 这样的方式
 
 
-### 自定义过渡的类名
+### 🟡 自定义过渡的类名
 
 - enter-class
 - enter-active-class
@@ -1221,7 +1220,7 @@ Vue 提供了 transition 的封装组件，在下列情形中，可以给任何�
 </div>
 ```
 
-### 显性的过渡持续时间
+### 🟡 显性的过渡持续时间
 在这种情况下你可以用 `<transition>` 组件上的 duration prop 定制一个显性的过渡持续时间 (以毫秒计)：
 ```html
 <transition :duration="1000">...</transition>
@@ -1233,7 +1232,7 @@ Vue 提供了 transition 的封装组件，在下列情形中，可以给任何�
 
 
 
-### JavaScript 钩子
+### 🟡 JavaScript 钩子
 可以在 attribute 中声明 JavaScript 钩子
 ```html
 <transition
@@ -1301,7 +1300,7 @@ methods: {
 当只用 JavaScript 过渡的时候，在 enter 和 leave 中必须使用 done 进行回调。否则，它们将被同步调用，过渡会立即完成。
 :::
 
-## 更多动画效果 ❌
+## 🟡 更多动画效果 
 [https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1](https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1)
 
 在demo里练习一哈
@@ -1352,7 +1351,7 @@ Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参�
 
 
 
-## 过滤器
+## 🔵 过滤器
 ```html
 <!-- 在双花括号中 -->
 {{ message | capitalize }}
@@ -1398,7 +1397,8 @@ new Vue({
 
 
 # 【工具】
-## 单文件组件
+>概念
+## 单文件组件 🐷
 export default 和 module.exports :  
 都属于导出模块
 
@@ -1408,29 +1408,28 @@ export default命令，为模块指定默认输出,默认导出一个整体接�
 
 >其实官方文档已经说得很好了！ 比如下面这段话 👇
 v/
-### 怎么看待关注点分离？
+### 怎么看待关注点分离？🐷
 一个重要的事情值得注意，**关注点分离不等于文件类型分离**。在现代 UI 开发中，我们已经发现相比于把代码库分离成三个大的层次并将其相互交织起来，把它们划分为松散耦合的组件再将其组合起来更合理一些。在一个组件里，其模板、逻辑和样式是内部耦合的，并且把他们搭配在一起实际上使得组件更加内聚且更可维护。
 
 ---
 
 
-## ❌单元测试
+## 🔴 单元测试
 
-❌不知道什么单元测试 暂时看不懂
+🔴 不知道什么单元测试 暂时看不懂
 
-## ❌TypeScript 支持
+## 🔴 TypeScript 支持
 
 ## 生产环境部署
 [https://cn.vuejs.org/v2/guide/deployment.html](https://cn.vuejs.org/v2/guide/deployment.html)
 
 
-# 【规模化】
->一个是路由，用vue-router就好了 后面可以慢慢理解
+# 🔵【规模化】
+> 🔵 一个是路由，用vue-router就好了 后面可以慢慢理解
 
->一个是状态管理 也是官方推荐是 vuex 
+> 🔵 一个是状态管理 也是官方推荐是 vuex 
 
->一个是服务器渲染 - SSR  
-Nuxt.js
+> 🔴一个是服务器渲染 - SSR Nuxt.js
 
 
 

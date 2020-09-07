@@ -2,28 +2,28 @@
 
 理解，常用，用于查阅。 （常用，但是经常忘记）用到才会查
 
-## 检查类型
+## 🔵 检查类型
 
     typeof [检测基本类型]
     instanceof [检测应用类型 123 instanceof number]
 
-##  arguments
+## 🔵 arguments
 
     arguments.length [参数的长度]
     arguments [转入的参数]
-## Infinity 无限大
+## 🔵 Infinity 无限大
 
     Infinity
     -Infinity
 
-## 字符串方法
+## 🔵 字符串方法
 
     toUpperCase()       把一个字符串全部变为大写
     toLowerCase()       把一个字符串全部变为小写
     indexOf()           会搜索指定字符串出现的位置： 没有找到会返回 -1 
     substring()         返回指定索引区间的子串
 
-## 数组方法
+## 🔵 数组方法
 
     slice()             它截取Array的部分元素
 
@@ -41,7 +41,7 @@
 
     join()              方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串
 
-## map
+## 🔵 map
 
     var m = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]]);
     m.get('Michael');           // 95
@@ -54,7 +54,7 @@
     m.delete('Adam');           // 删除key 'Adam'
     m.get('Adam');              // undefined
 
-## set
+## 🔵 set
 
 'Set'和'Map'类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在Set中，没有重复的key。  
 要创建一个Set，需要提供一个Array作为输入，或者直接创建一个空Set：  

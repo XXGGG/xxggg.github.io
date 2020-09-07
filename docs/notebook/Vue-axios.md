@@ -1,17 +1,17 @@
 # 🍉Vue - axios🍉
 
-## Axios    
+## 🟢 Axios    
 
 Axios 是一个基于 Promise 的 HTTP 库，可以用在浏览器和 node.js 中。  
 Github开源地址： [https://github.com/axios/axios](https://github.com/axios/axios)
 
 ---
 
-### 安装方法
+### 🟢 安装方法
 
     $ npm install axios -S
 
-### 配置
+### 🟢 配置
 
 用vue-cli的话(vue2.x的情况下)  
 在main.js文件中
@@ -30,7 +30,7 @@ Vue.prototype.axios = axios;
 
 ---
 
-## GET 方法
+## 🟢 GET 方法
 ```js
 this.axios.get('api 接口地址')
 .then(res => {  //ES6的箭头写法
@@ -40,7 +40,7 @@ this.axios.get('api 接口地址')
   console.log(error);
 });
 ```
-### GET 方法传递参数格式如下：
+### 🟢 GET 方法传递参数格式如下：
 就是在后面加个问号❓然后什么 = 什么
 ```js
 this.axios.get('/user?ID=12345')
@@ -67,7 +67,7 @@ this.axios.get('/user', {
   ```
 --- 
 
-## POST 方法
+## 🟢 POST 方法
 
 ```js
 this.axios.post('api接口地址')
@@ -78,7 +78,7 @@ this.axios.post('api接口地址')
   console.log(error);
 });
 ```
-### POST 方法传递参数格式如下：
+### 🟢 POST 方法传递参数格式如下：
 ```js
 this.axios.post('/user', {
   firstName: 'Fred',        // 参数 firstName
@@ -94,7 +94,7 @@ this.axios.post('/user', {
 
 ---
 
-## 全局封装
+## 🔵 全局封装
 对于封装来说，其实就是在封装文件里，添加一些 请求头、拦截器、等设置，这样就不用到处写一大推代码了    
 那么就要设置一个文件夹-文件 来放这个封装的js文件（可以是utils/request.js ，也可以axios/index.js) 都可以。稍微规范一点就可以了
 
@@ -143,7 +143,7 @@ export function post(url, data){
 ```
 > 这种方式呢，就是在请求的 调用一下这两个封装好的方法。
 
-### 第二种
+### 🔵 第二种
 axios/axios.js👇  
 ```js
 // 请求配置文件，axios的配置都在这里进行
@@ -240,7 +240,7 @@ export function getItemInfo(datas) {
 >👆 这种就是把所有的api请求方法都放在这里，然后需要用到在拿过去。这是一个promise,在用的时候要用异步来请求，等待他请求完成。
 个人还是喜欢第一种，虽然都差不多。。
 
-## 配置文件
+## 🔵 配置文件
 在vue-cli脚手架3.0以上 没有webpack的配置文件webpack
 
 所以vue-cli就在根目录上创建`vue.config.js` Vue会自动去加载这个文件👇
@@ -267,7 +267,7 @@ module.exports = {
 
 
 ---
-## 执行多个并发请求
+## 🟡 执行多个并发请求
 实例
 ```js
 function xxg1() {

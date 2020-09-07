@@ -4,7 +4,7 @@
 
 下面就来总结一下一些比较有用的知识吧。 
 
-## 安装?
+## 🟢【安装】
 
 ```sh
 npm install vue-router
@@ -24,7 +24,7 @@ vue3.0 暴露了很多函数出来，以后理解
 
 ---
 
-## 【基础】
+## 🟢【基础】
 
 在模板里要跳转的链接 肯定是使用
 ```html
@@ -55,17 +55,19 @@ export default new Router({
 export default 就是暴露出去 给main.js
 
 ---
-## $router
+## 🟢 $router - $route
+>注意看好是`$router` 还是 `$route`  
+
 可以通过 this.$route 访问当前路由：
-### this.$route.params
+### 🟢 this.$route.params (捕获传参)
 ```js
 this.$route.params.username
 ```
-### this.$route.go
+### 🟢 this.$router.go
 ```js
 this.$router.go(-1)
 ```
-### this.$route.push
+### 🟢 this.$router.push
 ```js
 this.$router.push('/')
 ```
@@ -73,7 +75,7 @@ this.$router.push('/')
 
 ---
 
-## 动态路由匹配
+## 🟢 动态路由匹配
 ```js
 const router = new VueRouter({
   routes: [
@@ -98,7 +100,7 @@ const router = new VueRouter({
 
 
 
-## 响应路由参数的变化
+## 🔵 响应路由参数的变化
 由于动态路由，组件复用 - 生命周期不会重启 -> 所以要检测变化用 watch 监听
 ```js
 const User = {
@@ -123,7 +125,7 @@ const User = {
 ```
 
 
-## 捕获所有路由或 404 Not found 路由
+## 🔵 捕获所有路由或 404 Not found 路由
 ```js
 {
   // 会匹配所有路径
@@ -148,7 +150,7 @@ this.$route.params.pathMatch // '/non-existing'
 
 
 
-## 嵌套路由
+## 🔵 嵌套路由
 要在嵌套的出口中渲染组件，需要在 VueRouter 的参数中使用 children 配置：
 ```html
 <router-view></router-view>
@@ -178,7 +180,7 @@ const router = new VueRouter({
 ```
 
 ---
-## 编程式的导航
+## 🔵 编程式的导航
 ### router.push(location, onComplete?, onAbort?)
 
 `this.$router.push`
@@ -209,7 +211,7 @@ router.push({ path: `/user/${userId}` }) // -> /user/123
 router.push({ path: '/user', params: { userId }}) // -> /user
 ```
 
-### router.go(n)
+### 🔵 router.go(n)
 ```js
 // 在浏览器记录中前进一步，等同于 history.forward()
 router.go(1)
@@ -225,7 +227,7 @@ router.go(-100)
 router.go(100)
 ```
 
-## 命名路由
+## 🔵 命名路由
 ```js
 const router = new VueRouter({
   routes: [
@@ -246,7 +248,7 @@ router.push({ name: 'user', params: { userId: 123 }})
 >所以以后就顺便给路由取名字 养成习惯。
 
 
-## 命名视图
+## 🟡 命名视图
 
 ```html
 <router-view class="view one"></router-view>
@@ -272,7 +274,7 @@ const router = new VueRouter({
 话说我们不是能在主页里面去加载其他模块么，怎么还要在路由着设置不同的模块，不过可能是不同的选择罢了吧......
 
 
-## 重定向和别名
+## 🟡 重定向和别名
 
 ### 重定向 `redirect`
 重定向也是通过 routes 配置来完成，下面例子是从 /a 重定向到 /b：
@@ -315,10 +317,10 @@ const router = new VueRouter({
 
 ---
 
-## 路由组件传参
+## 🔵 路由组件传参
 
 
-## HTML5 History 模式
+## 🔵 HTML5 History 模式
 
 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。
 
@@ -332,14 +334,14 @@ const router = new VueRouter({
 ```
 >在vue3.0以后 ->  `history: createWebHistory(process.env.BASE_URL)`,
 
-当你使用 history 模式时，URL 就像正常的 url，例如 http://yoursite.com/user/id，也好看！
+当你使用 history 模式时，URL 就像正常的 url，例如 http://yoursite.com/user/id ，也好看！
 
 不过这种模式要玩好，还需要后台配置支持。因为我们的应用是个单页客户端应用，如果后台没有正确的配置，当用户在浏览器直接访问 http://oursite.com/user/id 就会返回 404，这就不好看了。
 
 所以呢，你要在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面
 
 
-### 警告
+### 🔵 警告
 给个警告，因为这么做以后，你的服务器就不再返回 404 错误页面，因为对于所有路径都会返回 index.html 文件。为了避免这种情况，你应该在 Vue 应用里面覆盖所有的路由情况，然后在给出一个 404 页面。
 ```js
 const router = new VueRouter({
@@ -350,9 +352,9 @@ const router = new VueRouter({
 })
 ```
 
-# 【进阶】
+# ❌【进阶】
 
-## 导航守卫
+## ❌ 导航守卫
 
 
 

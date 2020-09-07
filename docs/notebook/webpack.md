@@ -1,6 +1,6 @@
 # 🥝webpack🥝
 
-## 〖提前总结〗
+## 🔵〖提前总结〗
 总的来说因为写vue的项目要用vue-cli来搭建，而vue-cli的模板又是webpack，所以我们要学习什么是webpack? 那webpack又是什么呢?  
 
 字面上翻译过来的意思是“网络打包”，打包? 为什么要打包?，因为我们要把代码文件分开来写（模块化），分开来写有个好处就是比较好看（所谓可读性强、易读，易维护），还有就是可以复用。  
@@ -24,7 +24,7 @@ node.js又是什么呢? 是可以运行js文件的！（什么?我不下载node.
 
 - ```require ``` - node的输入
 - ```module.exports``` - node的输出
-- ```exports ``` - node的👆的简写  
+- ```exports ``` - node的👆的简写（还是有所不同）  
 
 - ```import``` - ES6的输入
 - ```export``` - ES6的输出（暴露）
@@ -35,7 +35,7 @@ node.js又是什么呢? 是可以运行js文件的！（什么?我不下载node.
 
 👇下面开始别人的教学??
 ---
-## webpack是什么
+## 🔵 webpack是什么
 Webpack 是一个开源的前端打包工具。Webpack 提供了前端开发缺乏的模块化开发方式，将各种静态资源视为模块，并从它生成优化过的代码。要使用Webpack 前须先安装Node.js。
 
 ```sh
@@ -46,12 +46,15 @@ webpack runoob1.js bundle.js
 ```
 执行以上命令会编译 runoob1.js 文件并生成bundle.js 文件，
 
----
-## 【webpack】👇直接看别人的文章
->参考文章[https://segmentfault.com/a/1190000012950660](https://segmentfault.com/a/1190000012950660)
+>这里给黄球🔵的意思，虽然vue-cli模板是webpack，但是很少在命令行这样打，大致也了解。
 
-👇  
-## webpack打包的好处  
+---
+## 🐷【webpack】直接看别人的文章 👇
+参考文章：[https://segmentfault.com/a/1190000012950660](https://segmentfault.com/a/1190000012950660)
+
+  
+## 🔵 webpack打包的好处  
+c -> d ，把c文件打包成d文件
 ```sh
 webpack c.js d.js  
 ```
@@ -63,7 +66,7 @@ webpack c.js d.js
 而script不仅仅会影响到自己，还会影响到其它文件的下载，因为script会阻塞其它资源的下载(意思就是在下载script的时候不能下载其它文件)，在低版本浏览器中连其它的script也会阻塞。
 
 
-## node全局变量
+## 🟡 node全局变量
 
 node.js中有个全局变量global,它就像浏览器中的window对象一样，都是运行环境提供的全局变量，在浏览器的运行环境中提供的是window对象，在node.js中提供的global对象
 
@@ -103,20 +106,21 @@ node.js中有个全局变量global,它就像浏览器中的window对象一样，
 var声明的变量并不会挂载到global全局变量上
 
 
-## 👇模块级变量
+## 🟢模块级变量👇
 
 - require 函数
 - exports 函数
 
-### 🍖 require 引用 模块
+### 🟢 require 引用 模块🍖
 ```
 require(/a.js)      //可以省略.js 要是路径
 
 require(express)      //直接名字 - node自带的或是第三方的
 //（第三方的会去node_modues这个文件夹下找）
 ```
+>在vue-cli中引入图片有使用过
 
-### 🍙 mudule.exports 输出模块
+### 🔵 mudule.exports 输出模块🍙
 
 ```
 c.js
@@ -152,8 +156,9 @@ exports = {'a':a,'b':b,'c':c};
 
 【👆node的告一段落👆】
 -----
+
 接下来👇
-## ES6模块化
+## 🟢 ES6模块化
 说完webpack的那些概括与node的引入/暴露。就来说说ES6的模块化是咋样的。👇
 
 es6提供了import 和 export来实现模块化
@@ -165,12 +170,13 @@ es6提供了import 和 export来实现模块化
 
 **module.exports={ 'a':a }** 等价写法 **export default { a }**
 
+>vue-cli中的单文件组件之间的引入和暴露用的就是ES6的 `import` 和 `export`
 ---
 es6中是使用export命令后面加上要导出的变量来实现导出的，而用import xx from 'xxxx'的形式来引入，而xx必须跟export命令后的变量名一模一样才能导入
 
 上面和require、module.exports等价的用法使用了default关键字，所以在引入时可以自定义名字，这也是最常用的用法
 
-## 模块化总结
+## 🐷 模块化总结
 **无论是node.js还是es6提供的模块化功能都不能直接使用，浏览器是没有办法识别node.js环境的变量也无法识别es6的语法，所以我们需要用webpack来实现，把它们都转化成浏览器能识别的代码。**
 
 在使用webpack的时候，我们还是用es6的import和export比较多，因为require js文件直接可以用es6替代，引入node_module我们只要通过配置wepack也可以轻松用es6替代，而node.js的核心模块在浏览器中本来就没法用，所以在前端代码中也用不上，所以只要用es6的语法来实现模块化就好啦
@@ -179,7 +185,7 @@ es6中是使用export命令后面加上要导出的变量来实现导出的，�
 
 >**可以看得出来，毕竟在vue-cli项目里很多都是es6的引入方式和暴露方式，然后请求图片等静态资源的时候用require**
 
-## 最麻烦的webpack基本配置
+## 🟡 最麻烦的webpack基本配置
 >还好是基本......
 webpack.config.js👇
 ```js
@@ -244,7 +250,7 @@ module.exports = config;
 ```
 
 
-## 〖完〗-【最后】
+## 🐷〖完〗-【最后】
 
 最后 基本的webpack就学到这里了。  
 很好的暂时理解了webpack的一个作用与基本使用。  

@@ -1,6 +1,6 @@
 # 🥝SSH-公钥私钥🥝
 
-## 如何创建SSH
+## 🔵 如何创建SSH
 打开Shell（Windows下打开Git Bash）
 ```sh
 ssh-keygen -t rsa -C "你的邮@箱地址.com"
@@ -12,7 +12,7 @@ ssh-keygen -t rsa -C "你的邮@箱地址.com"
 
 >公钥可以添加到GitHub或者码云个人账户-><code>SSH Keys</code>里，这样就绑定了电脑和远程仓库，以后提交push就可以不用输入密码了
 
-## 如何查看SSH
+## 🔵 如何查看SSH
 
 ### 查看公钥
 在终端输入

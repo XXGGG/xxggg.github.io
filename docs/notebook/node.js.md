@@ -3,8 +3,9 @@
 **node.js按道理来说 算后端语言吗??  大概吧，但是前端还是要知道这个东西的，**  
 **没别的，vue-cli就是基于webpack跟node.js 所以即使暂时不需要知道太多，但该知道的还是要了解的！**  
 
+>对比Node.js 还是标🟡吧...
 
-## Node.js 是啥?
+## 🟡 Node.js 是啥?
 >还是一样！ 参考一下别人的文章来对知识点更加了解  
 参考文章：[https://zhuanlan.zhihu.com/p/69474395](https://zhuanlan.zhihu.com/p/69474395)
 
@@ -14,7 +15,7 @@
 
 **(哦，我明白了，虽然我写的js文件可以运行，但是要把他加载到html文件里面，然后再打开浏览器来运行！。如果单独一个js文件要运行起来 在命令行里运行它，还是要node.js 使用 node xxx.js)**
 
-## 前端项目使用node
+## 🟡 前端项目使用node
 >看到这个比较有体会，看来真的要了解node.js，虽然以前学过，但是忘光了。。
 
 1. 使用官方提供的模块，nodejs环境已经提供了各种官方模块，通过require引入
@@ -44,7 +45,7 @@ var newStr=strApi.removeNum(str) //使用removeNum，得到'bcdefg'
 ```
 >removeNum可以理解为暴露出去的方法，然后在main.js用应用这个方法，就像外面在vue项目中的main.js中引入一些第三方库，比如axios或者vue-router，然后全局使用
 
-##  package.json文件
+##  🔵 package.json文件
 >后面说的是一些关于npm的什么安装还有关于```node_modules```的还有 ```package.json```
 
 当然npm init 后会初始化package.json 这个文件里面的格式信息什么的还是很重要的。
@@ -57,7 +58,7 @@ var newStr=strApi.removeNum(str) //使用removeNum，得到'bcdefg'
  1. dependencies里面的包是项目运行必须用到的包，如果缺少了，项目无法正常运行  
  2. devDependencies里面的包是在项目开发时会使用到的包，不是项目运行所必须的，比如所你想安装一个监视文件变化的包，这个包并不是项目所必须要，只是为了方便开发而安装的
 
-## package.json里面的script
+## 🟢 package.json里面的script
 在package.json文件里面有一个script属性，可以使用自定义的名称的方式来执行一个命令  
 命令里面使用的nodejs模块默认是项目文件下面node_modules里面的模块，使用方法是：npm run 自定义的名称
 比如：
@@ -71,19 +72,19 @@ var newStr=strApi.removeNum(str) //使用removeNum，得到'bcdefg'
 
 ---
 # 【其他】
->参考一下其他文章：
+参考一下其他文章：
 [https://segmentfault.com/a/1190000012066000](https://segmentfault.com/a/1190000012066000)
 
 - 创建文件夹 mkdir name
 - 切换 cd name
 
-## 引入文件
+## 🔵 引入文件
 1. node.js采用了CommonJS规范，通过require来引入一个js文件
 ```js
 require('./a.js)
 ```
 
-## 模块概念
+## 🔵 模块概念
 1. node中的一个模块就是一个js文件，多个模块组成的一个特定功能的一推文件叫“包”
 >也就是我们经常用npm下载人家的那些包
 2. 一个js文件可以定义它自己暴露给外部的变量 用👇
@@ -136,7 +137,7 @@ test.func1()
 test.func2()
 ```
 
-## exports 和 module.exports 的关系
+## 🔵 exports 和 module.exports 的关系
 exports 是module.exports的一个引用，意思就是指向同一块内存地址，node中真正生效的是module.exports,修改exports本质上也是修改module.exports的值，
 
 比如exports.a = 3，实际上module.exports.a也是等于3的
@@ -180,11 +181,11 @@ console.log(a)  //打印出的结果为：{}
 ```
 
 
-## node中的npm
+## 🟢 node中的npm
 > 这个在上面有写过 基本差不多
 
-## node.js中自带的那些模块
-### http模块
+## 🟡 node.js中自带的那些模块
+#### http模块
 使用别人的模块，其实就是使用别人写好的方法(函数)，只需要搞清楚别人提供的方法是怎么用的就可以了，可以查node.js官网查api或者看看网上写的教程就好。
 
 下面演示了一个最简单的http模块的使用方法，在当前目录下在命令行中输入node test.js，http会挂起一个监听，只需要在浏览器中输入http://localhost:8000，test.js就会跟浏览器返回```<div>hello world</div>```显示在页面上：
@@ -199,7 +200,7 @@ var callBack = function(req, res) {
 http.createServer(callBack).listen(8000)
 ```
 
-### url模块
+### 🟡 url模块
 在http模块的例子中传入了一个回调函数，两个参数分别是```request```和```response```，前者是浏览器传给我们的对象，后者是我们传给浏览器的对象。
 
 其中req中包含了url这个属性，可以在回调函数中把它打印出来```console.log(req.url)```,加入你在浏览器中输入的是：```http://localhost:8000/aaa/bbb?abc=3```，那么打印出来的值是：```/aaa/bbb?abc=3```
@@ -222,7 +223,7 @@ var callBack = function(req, res) {
 http.createServer(callBack).listen(8000)
 ```
 
-### fs模块
+### 🟡 fs模块
 fs是一个提供文件操作功能的模块，可以对文件进行读写存删等操作，下面演示向浏览器返回本js的内容：
 ```js
 //test.js
@@ -237,7 +238,7 @@ var callBack = function(req, res) {
 http.createServer(callBack).listen(8000)
 ```
 
-### 用http模块、url模块、http模块搭建一个静态服务器
+### 🟡 用http模块、url模块、http模块搭建一个静态服务器
 ```js
 var http = require('http')
 var url = require('url')
@@ -259,10 +260,10 @@ fs.readFile('.' + pathname, 'utf-8', function(err, data) {
 http.createServer(callBack).listen(8000)
 ```
 
-## 使用外部模块
+## 🟡 使用外部模块
 外部模块都是第三方提供的模块，node.js默认是不提供的，所以需要用npm安装，这里提供package.json文件，只需要执行npm install 安装就行了.
 
-### express
+#### express
 express提供了基本的路由和静态文件访问的功能，当然还有其它的功能，这里主要演示它的基本使用
 下面1,2,3都是设置public和files目录下为静态文件，可以直接通过文件路径访问，1、2可以同时存在，即可以指定几个目录均为静态文件目录，在指定目录为静态文件后，访问静态文件需要省略这个目录，比如访问public目录下的css/index.css：localhost:8000/css/index.css,直接省略了public，
 可以通过3来指定替换目录名称的路径，通过3设置后，要访问public下的css/index.css：localhost:8000/public/css/index.css
@@ -285,17 +286,17 @@ app.listen(8000, function () {
 >有点蒙圈 不是很懂。。。 哇啊哈哈
 
 ---
-### superagent、cheerio模块
+#### superagent、cheerio模块
 superagent是一个可以发http请求的模块，回调函数中的res就是请求到的内容
 
 cheerio是在服务器端类式jquery的框架，
 
 
 
-### eventproxy
+#### eventproxy
 在爬取一堆类式的链接的时候，一个个链接写挺麻烦的，eventproxy提供了监听，然后触发回调的方式来处理这类问题，
 
-## 【完】-【总结】
+## 🐷【完】-【总结】
 暂时对需要了解的node.js 到这里  
 文章作者也总结得很到位。  
 这里写下那段很有趣的总结。  
