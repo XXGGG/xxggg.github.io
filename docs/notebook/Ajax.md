@@ -13,10 +13,10 @@
 对于vue 之前官方推荐的就是axios 也就是vue-axios...  
 
 👇ajax、axios、fetch的区别   
-[https://www.jianshu.com/p/8bc48f8fde75](https://www.jianshu.com/p/8bc48f8fde75)
+[文章](https://www.jianshu.com/p/8bc48f8fde75)
 
 ---
-参考文章：[https://www.runoob.com/ajax/ajax-tutorial.html](https://www.runoob.com/ajax/ajax-tutorial.html)
+[参考文章](https://www.runoob.com/ajax/ajax-tutorial.html)
 
 ## 🔵 什么是Ajax
 - AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。  

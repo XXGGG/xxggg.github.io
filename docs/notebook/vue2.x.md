@@ -7,7 +7,7 @@
 
 # 🟢【基础】👇
 略......
->直接看官方文档👉[https://cn.vuejs.org/v2/guide/instance.html](https://cn.vuejs.org/v2/guide/instance.html)
+>直接看👉[官方文档](https://cn.vuejs.org/v2/guide/instance.html)
 
 ---
 
@@ -42,7 +42,7 @@ vm.$watch('a', function (newValue, oldValue) {
   // 这个回调将在 `vm.a` 改变后调用
 })
 ```
-API参考：[https://cn.vuejs.org/v2/api/#%E5%AE%9E%E4%BE%8B-property](https://cn.vuejs.org/v2/api/#%E5%AE%9E%E4%BE%8B-property)
+[API参考](https://cn.vuejs.org/v2/api/#%E5%AE%9E%E4%BE%8B-property)
 
 >一个vue项目制new Vue一次，通常是在main.js里，这次实例化的Vue对象是根组件，其他的子组件都是通过配置文件的方式一层一层的叠加上的，通过vue组件配置进行叠加的子组件，其实是vue的一种省略机制，它避免了你每次都去实例化子组件。   
 vue-cli生成的项目脚手架里，通过webpack配置很好的处理了这些问题，每个单文件组件 *。vue js输出的就是一份配置，就足够了，最终他们都会汇总到app.vue，app.vue再在main.js里实例化，也就是说这套脚手架里面只有一个实例化对象。
@@ -183,7 +183,7 @@ watch: {
 除了 watch 选项之外，您还可以使用命令式的 vm.$watch API。
 
 >原文中的知识  👇
-[https://cn.vuejs.org/v2/guide/computed.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E7%9A%84-setter](https://cn.vuejs.org/v2/guide/computed.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E7%9A%84-setter)  
+[知识](https://cn.vuejs.org/v2/guide/computed.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E7%9A%84-setter)  
 // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
 // 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率
 // AJAX 请求直到用户输入完毕才会发出。想要了解更多关于
@@ -251,7 +251,7 @@ computed: {
 
 ### 用 key 管理可复用的元素
 >这里不算特别重要的内容，但还是复制过来 - 网址 哈哈
-[https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0](https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0)
+[网址](https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0)
 
 
 ### 🟢 ```v-show``` 🟢
@@ -606,7 +606,7 @@ data: function () {
   }
 }
 ```
->[https://cn.vuejs.org/v2/guide/components.html#data-%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0](https://cn.vuejs.org/v2/guide/components.html#data-%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0)
+>[网址](https://cn.vuejs.org/v2/guide/components.html#data-%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0)
 
 
 
@@ -662,7 +662,7 @@ methods: {
 
 ## 🔵 在组件上使用 v-model
 
->详细请参考官方文档：[https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model](https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model)
+>详细请参考官方文档：[网址](https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model)
 
 ```html
 <custom-input v-model="searchText"></custom-input>
@@ -985,7 +985,7 @@ Vue.component('my-component', {
 ### 🔴 非 Prop 的 Attribute
 >🔴没怎么懂  
 
-[https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute](https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute)
+[网址](https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84-Attribute)
 
 >🔴先不搞懂
 
@@ -1008,7 +1008,7 @@ Vue 提供了一个 $listeners property，它是一个对象，里面包含了�
   input: function (value) { /* ... */ },
 }
 ```
->有点没怎么懂[https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6)
+>有点没怎么懂[网址](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6)
 
 
 ### `.sync` 修饰符
@@ -1071,7 +1071,7 @@ Vue 提供了一个 $listeners property，它是一个对象，里面包含了�
 自 2.6.0 起有所更新。已废弃的使用 slot attribute 的语法。
 
 ## 🔴 算了 插槽这一pa 先过 ❌
-后面补[https://cn.vuejs.org/v2/guide/components-slots.html](https://cn.vuejs.org/v2/guide/components-slots.html)
+后面补[网址](https://cn.vuejs.org/v2/guide/components-slots.html)
 
 
 ## 🔵 动态组件 & 异步组件
@@ -1301,7 +1301,7 @@ methods: {
 :::
 
 ## 🟡 更多动画效果 
-[https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1](https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1)
+[网址](https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%9D%E5%A7%8B%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E6%B8%A1)
 
 在demo里练习一哈
 
@@ -1421,7 +1421,7 @@ v/
 ## 🔴 TypeScript 支持
 
 ## 生产环境部署
-[https://cn.vuejs.org/v2/guide/deployment.html](https://cn.vuejs.org/v2/guide/deployment.html)
+[网址](https://cn.vuejs.org/v2/guide/deployment.html)
 
 
 # 🔵【规模化】

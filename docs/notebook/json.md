@@ -34,9 +34,9 @@ json的全称为：JavaScript Object Notation，是一种轻量级的数据交�
 **o(=•ェ•=)m 下面这两个还挺重要的**
 
 ## 🟢 JSON.parse()👇 ）
->>JSON 通常用于与服务端交换数据。 在接收服务器数据时一般是字符串。  
+>JSON 通常用于与服务端交换数据。 在接收服务器数据时一般是字符串。  
 - **JSON.parse() 方法将数据转换为 JavaScript 对象。**  
 
 ## 🟢 JSON.stringify()👇
->>JSON 通常用于与服务端交换数据。在向服务器发送数据时一般是字符串。  
+>JSON 通常用于与服务端交换数据。在向服务器发送数据时一般是字符串。  
 - **JSON.stringify() 方法将 JavaScript 对象转换为字符串。**   

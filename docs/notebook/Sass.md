@@ -1,6 +1,6 @@
 # 🥝Sass/scss🥝
 
-根据[https://www.runoob.com/sass/sass-tutorial.html](https://www.runoob.com/sass/sass-tutorial.html)
+根据[参考文章](https://www.runoob.com/sass/sass-tutorial.html)
 
 ## 安装 （npm）
 ```sh
@@ -23,13 +23,13 @@ body {
 ```
 
 ### 作用域
-[https://www.runoob.com/sass/sass-variables.html](https://www.runoob.com/sass/sass-variables.html)
+[参考文章](https://www.runoob.com/sass/sass-variables.html)
 
 
 **注意：所有的全局变量我们一般定义在同一个文件，如：_globals.scss，然后我们使用 @include 来包含该文件。**
 
 ### 嵌套
-[https://www.runoob.com/sass/sass-nesting.html](https://www.runoob.com/sass/sass-nesting.html)
+[参考文章](https://www.runoob.com/sass/sass-nesting.html)
 
 ### 导入文件 @import
 CSS @import 指令在每次调用时，都会创建一个额外的 HTTP 请求。但，Sass @import 指令将文件包含在 CSS 中，不需要额外的 HTTP 请求。  

@@ -1,7 +1,7 @@
 # 🍇flex布局🍇
 
 本文参考微信小程序的基本布局方法 - flex布局  
-[https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a](https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a) 
+[参考文章](https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a) 
 
 ## 🐱‍👤开始 
 设置容器的属性有：  
@@ -83,7 +83,7 @@ flex-direction 就是用来选主轴的
 ## 🔵 flex-shrink
 当项目在主轴方向上溢出时，通过设置项目收缩因子来压缩项目适应容器。属性值为项目的收缩因子，属性值取非负数。
 >计算过程 极其复杂，不过貌似挺少用到的。
-详情请看[https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a](https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a)
+详情请看[参考文章](https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a)
 
 ![flex11](../../.vuepress/public/flex/flex11.png)
 
