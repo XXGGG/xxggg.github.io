@@ -1,5 +1,5 @@
 ---
-title: 2.【折腾记录】删除之前commit的提交
+title: 【折腾记录03】删除之前commit的提交
 author: '谢夏戈'
 date: 2020-08-17
 sidebar: 'auto'
@@ -9,6 +9,7 @@ categories:
 tags:
  - Git
 ---
+【感觉没写好，晚些重新调整下】
 
 # 删除之前commit的提交
 
@@ -132,18 +133,10 @@ test4的内容会合并到test3 而test4这个commit会消失
     
 戳一下就出来了 en！o(￣▽￣)ｄ 
 
-## 最后的最后
-感谢您看到这里 希望能帮到您  
-文中如果出现什么错误，请见谅（我是小白，就记录一下自己的折腾过程）。并反馈给我 #3#
+## 参考文章👇  
 
-我的GitHub：[谢夏戈-XXGGG](https://github.com/XXGGG)  
-我的博客：[谢夏戈的博客（GitHubPages）](https://github.com/XXGGG) ，[谢夏戈的博客（GiteePages）](https://xxggg.gitee.io/) 
-
-
----
-参考文章： 
-[https://blog.csdn.net/qq_37960603/article/details/82814939?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param](https://blog.csdn.net/qq_37960603/article/details/82814939?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param)
+[参考文章1](https://blog.csdn.net/qq_37960603/article/details/82814939?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param)
   
-[https://www.jianshu.com/p/384a945f6e7e](https://www.jianshu.com/p/384a945f6e7e)
+[参考文章2](https://www.jianshu.com/p/384a945f6e7e)
 
-[https://blog.csdn.net/faithmy509/article/details/81271436?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param](https://blog.csdn.net/faithmy509/article/details/81271436?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
+[参考文章3](https://blog.csdn.net/faithmy509/article/details/81271436?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)

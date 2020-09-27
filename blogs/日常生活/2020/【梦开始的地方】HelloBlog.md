@@ -1,5 +1,5 @@
 ---
-title: 0.【梦开始的地方】Hello Blog
+title: 【梦开始的地方】Hello Blog
 author: '谢夏戈'
 date: 2020-08-14
 sidebar: 'auto'

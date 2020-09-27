@@ -4,7 +4,7 @@
 
 项目地址：  
 [https://xxggg.github.io/Veronica](https://xxggg.github.io/Veronica)  
-[https://xxggg.gitee.io/Veronica](https://xxggg.gitee.io/Veronica)  
+[https://xxggg.gitee.io/Veronica](https://xxggg.gitee.io/Veronica)  （国内用这个！）
 
 由于手机端不需要浏览器的主页，大部分手机浏览器都自带主页/首页 而且也无法更改  
 而且手机浏览器首页主页的意义也不大，大部分人主要功能更喜欢浏览器自带的主要功能，或者APP。  

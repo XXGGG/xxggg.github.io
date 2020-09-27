@@ -26,11 +26,16 @@ module.exports = {
         "text": "主页",
         "link": "/",
         "icon": "reco-home"
+      },    
+      {
+        "text": "小笔记",
+        "icon": "reco-blog",
+        "link": "/docs/notebook/"
       },
       {
-        "text": "时间线",
-        "link": "/timeline/",
-        "icon": "reco-date"
+        "text": "小黄鸭",
+        "icon": "reco-other",
+        "link": "/docs/BathDuck/"
       },
       {
         "text": "项目",
@@ -40,16 +45,15 @@ module.exports = {
           {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
               { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'},
-              { "text": "💠 vue3-demo", "link": "https://xxggg.gitee.io/demo/","target":'_blank'},
               { "text": "💠 vue2-demo", "link": "https://xxggg.gitee.io/vue2-demo/","target":'_blank'}
            ]
           }
         ]
       },
       {
-        "text": "手册",
-        "icon": "reco-other",
-        "link": "/docs/notebook/"
+        "text": "时间线",
+        "link": "/timeline/",
+        "icon": "reco-date"
       },
       {
         "text": "联系",
@@ -80,21 +84,21 @@ module.exports = {
     ],
     "sidebar": {
       "/docs/notebook/": [
-        "",
-        "什么是知识",
+        "",  
+
+        "【HTML】小笔记",
+        "【CSS】小笔记",
+        "【JavaScript】小笔记",
+        "flex布局",
+
+        "【HTML】大笔记",
+        "【CSS】大笔记",
+        "【JavaScript】大笔记",
+
         "commit规范",
         "Git",
-        "SSH-公钥私钥",
-        "webpack",
-        "json",
-        "npm",
-        "node.js",
-        "Ajax",
-        "css预处理器",
+        "SSH-公钥私钥",  
         "Sass",
-
-        "flex布局",
-        "【CSS3】代码片段",
 
         "vue2.x",
         "vue3.0",
@@ -103,12 +107,18 @@ module.exports = {
         "vue-vuex",
         "Vue-axios",
 
-        "【HTML5】",
-        "【CSS3】基础知识",
-        "【JavaScript】小笔记",
-        "【JavaScript】大笔记",
-        
         "奇奇怪怪的面试题"
+      ],
+      "/docs/BathDuck/": [
+        "",
+        "0001什么是知识",
+        "0002webpack",
+        "0003json",
+        "0004npm",
+        "0005node.js",
+        "0006Ajax",
+        "0007闭包",
+        "0008css预处理器"
       ],
       "/docs/project/": [
         "",
@@ -119,11 +129,11 @@ module.exports = {
     "type": "blog",
     "blogConfig": {
       "category": {
-        "location": 2,
+        "location": 5,
         "text": "分类"
       },
       "tag": {
-        "location": 3,
+        "location": 6,
         "text": "标签"
       }
     },

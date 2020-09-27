@@ -6,21 +6,23 @@
 ## 🐱‍👤开始 
 设置容器的属性有：  
 ```css
-.css{
-    display:flex;
+display:flex;
 
-    flex-direction:row（默认值） | row-reverse | column |column-reverse
+flex-direction:row（默） | row-reverse | column |column-reverse
 
-    flex-wrap:nowrap（默认值） | wrap | wrap-reverse
+flex-wrap:nowrap（默） | wrap | wrap-reverse
 
-    justify-content:flex-start（默认值） | flex-end | center |space-between | space-around | space-evenly
+justify-content:flex-start（默） | flex-end | center |space-between | space-around | space-evenly
 
-    align-items:stretch（默认值） | center  | flex-end | baseline | flex-start
+align-items:stretch（默） | center  | flex-end | baseline | flex-start
 
-    align-content:stretch（默认值） | flex-start | center |flex-end | space-between | space-around | space-evenly
-}
+align-content:stretch（默） | flex-start | center |flex-end | space-between | space-around | space-evenly
 ```
 >（试都能试出效果）  
+下面是详细说明，总结都在上面。
+
+---
+
 
 **总而言之，先把display选成flex吧！**
 
@@ -29,7 +31,6 @@ flex-direction 就是用来选主轴的
 - row 是横 
 - column 是竖
 - 后面带-reverse就是相反方向
->有图片，但是懒得放，这个很好理解。（算了还是放）
 
 ![flex1](../../.vuepress/public/flex/flex1.png)
 ![flex2](../../.vuepress/public/flex/flex2.png)
