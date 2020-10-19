@@ -1,6 +1,6 @@
 module.exports = {
   "title": "谢夏戈的博客",
-  "description": "阿巴阿巴阿巴~~",
+  "description": "",
   "dest": "public",
   "head": [
     [
@@ -41,7 +41,7 @@ module.exports = {
         "text": "项目",
         "icon": "reco-api",
         "items": [
-          {"text": "🍋🍋🍋🍋🍋🍋🍋",  "items": [{ "text": "【项目说明】", "link": "/docs/project/"}]}, 
+          {"text": "🍋🍋🍋🍋🍋🍋🍋",  "items": [{ "text": "【项目笔记】", "link": "/docs/project/"}]}, 
           {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
               { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'},
@@ -111,7 +111,7 @@ module.exports = {
       ],
       "/docs/BathDuck/": [
         "",
-        "0001什么是知识",
+        "0001什么是",
         "0002webpack",
         "0003json",
         "0004npm",

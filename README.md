@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: 🍀 了解的越多，知道的越少。 🍀
+heroText: 🍀 『好好学习』 🍀
 tagline: 🍓🍉🍊🍋🥭🍍🍎🥝🍇
 heroImage: /hero.png
 heroImageStyle: {

@@ -1,5 +1,7 @@
 # 🍓HTML 大笔记🍓
 
+关于HTML整理的知识
+
 ## 🔵 sessionStorage
 
 ### 保存数据语法：
@@ -47,3 +49,14 @@ localStorage.removeItem("key");
 - localStorage 只支持 string 类型的存储  
 
 ---
+
+## 🔵 移动端优化
+
+    <meta 
+		name="viewport" 
+		content =  "width=device-width, I
+                    nitial-scale=1.0,
+                    minimum-scale=1.0,
+                    maximum-scale=1.0,
+                    er-scalable=no"
+    >
