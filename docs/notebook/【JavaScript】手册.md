@@ -1,4 +1,4 @@
-# 🍇JavaScript 小笔记🍇
+# 🍇〖JavaScript〗手册🍇
 
 
 # 【代码】

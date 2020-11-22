@@ -86,14 +86,14 @@ module.exports = {
       "/docs/notebook/": [
         "",  
 
-        "【HTML】小笔记",
-        "【CSS】小笔记",
-        "【JavaScript】小笔记",
-        "flex布局",
+        "【HTML】手册",
+        "【CSS】手册",
+        "【JavaScript】手册",
+        "【flex布局】手册",
 
-        "【HTML】大笔记",
-        "【CSS】大笔记",
-        "【JavaScript】大笔记",
+        "【HTML】学习笔记",
+        "【CSS】学习笔记",
+        "【JavaScript】学习笔记",
 
         "commit规范",
         "Git",
