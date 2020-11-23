@@ -1,6 +1,6 @@
 module.exports = {
   "title": "谢夏戈的博客",
-  "description": "",
+  "description": "Welcome",
   "dest": "public",
   "head": [
     [
@@ -85,15 +85,10 @@ module.exports = {
     "sidebar": {
       "/docs/notebook/": [
         "",  
-
-        "【HTML】手册",
-        "【CSS】手册",
-        "【JavaScript】手册",
-        "【flex布局】手册",
-
-        "【HTML】学习笔记",
-        "【CSS】学习笔记",
-        "【JavaScript】学习笔记",
+        "【HTML】",
+        "【CSS】",
+        "【JavaScript】",
+        "【flex】",
 
         "commit规范",
         "Git",
@@ -107,7 +102,11 @@ module.exports = {
         "vue-vuex",
         "Vue-axios",
 
-        "奇奇怪怪的面试题"
+        
+        "【学习笔记】",
+        "【HTML】学习笔记",
+        "【CSS】学习笔记",
+        "【JavaScript】学习笔记",
       ],
       "/docs/BathDuck/": [
         "",
@@ -127,26 +126,26 @@ module.exports = {
       ],
     },
     "type": "blog",
-    "blogConfig": {
-      "category": {
-        "location": 5,
-        "text": "分类"
-      },
-      "tag": {
-        "location": 6,
-        "text": "标签"
-      }
-    },
+    // "blogConfig": {
+    //   "category": {
+    //     "location": 5,
+    //     "text": "分类"
+    //   },
+    //   "tag": {
+    //     "location": 6,
+    //     "text": "标签"
+    //   }
+    // },
     "friendLink": [
       {
         "title": "谢夏戈的博客（GitHub）xxggg.github.io",
-        "desc": "GitHub Pages 部署的博客",
+        "desc": "GitHub Pages 博客",
         // "email": "534464179@qq.com",
         "link": "https://xxggg.github.io"
       },
       {
         "title": "谢夏戈的博客（码云) xxggg.gitee.io",
-        "desc": "Gitee Pages 同步 Github Pages内容的 ， “xxggg.github.io”登陆不上时可以登陆这个！.",
+        "desc": "Gitee Pages 博客",
         // "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
         "link": "https://xxggg.gitee.io"
       }

@@ -1,12 +1,10 @@
 ---
-title: 【梦开始的地方】Hello Blog
+title: Hello Blog
 author: '谢夏戈'
 date: 2020-08-14
 sidebar: 'auto'
 categories:
- - 日常生活
-tags:
- - ZERO
+ - 学习记录
 ---
 
 
@@ -24,3 +22,6 @@ tags:
 同时会发布到"CSDN"。
 
 **慢慢学习 好好学习！ 谢谢大家的支持！**
+
+
+

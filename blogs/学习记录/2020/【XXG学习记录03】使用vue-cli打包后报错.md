@@ -1,18 +1,14 @@
 ---
-title: 【折腾记录04】报错‘Failed to load resource:net::ERR_FILE_NOT_FOUND’
+title: 【XXG学习记录03】使用vue-cli打包后报错 ‘Failed to load resource:net::ERR_FILE_NOT_FOUND’
 author: '谢夏戈'
 date: 2020-08-18
 sidebar: 'auto'
 categories:
- - 折腾记录
-
-tags:
- - 报错
+ - 学习记录
 ---
  
 
-
-## 问题
+## 前言
 使用vue脚手架打包项目，npm run build之后运行index.html出现异常
 
     Failed to load resource: net::ERR_FILE_NOT_FOUND

@@ -1,40 +1,36 @@
 ---
-title: 【折腾记录05】在vue中销毁监听removeEventListener
+title: 【XXG学习记录04】在vue中销毁监听removeEventListener
 author: '谢夏戈'
 date: 2020-10-20
 sidebar: 'auto'
 categories:
- - 折腾记录
-
-tags:
- - js
+ - 学习记录
 ---
  
 
-## 遇到的问题🐷
+## 前言🐷
 在回顾之前作品demo时发现，我在监听鼠标的时候，即使退出了“当前页面”也没有消除监听。  
 发现原因是我退出了“当前页面”后，还在控制台看到了“console.log”的输出
 
-后面使用了vue中的`destroyed`生命周期函数来在“这个页面组件销毁时”配合`window.removeEventListener('mousemove',this.move)`来销毁监听。
-
-但是还是没用，查阅后有人说要在后面加上“true”。  
-比如👉`window.removeEventListener('mousemove',this.move，true)`    
-**还是没用**  
-其实后面这个“true” 是用来调整“捕获/冒泡”事件的  
-[参考文章](https://blog.csdn.net/learn8more/article/details/103193872)  
+后面使用了vue中的`destroyed`生命周期函数来在“这个页面组件销毁时”  
+配合`window.removeEventListener('mousemove',this.move)`来销毁监听。
+ 
+**但是没用**   
 
 ## 解决方法
 问题其实出现在👇  
-我在主组件APP.vue中使用了
+我在主组件APP.vue中使用了keep-alive
 ```
 <keep-alive>
     <router-view></router-view>
 </keep-alive>
 ```
-导致页面缓存了，所以组件并没有被销毁，也就是说，没有触发`destroyed`  
-所以我们需要手动触发   
+keep-alive 导致页面缓存了，没有触发组件销毁`destroyed`   
+>组件被缓存，退回首页的时候自然就没有被销毁了，所以我们利用回首页路由转变👇
+
+手动触发`destroy`   
 👇就是当路由发现变化时，调用`destroy`
-```
+```js
 beforeRouteLeave(to, from, next) {
     this.$destroy();
     next();
@@ -50,20 +46,27 @@ destroyed() {
 还有一个原因:我在监听和销毁时 所指定的那个方法。    
 比如👇
 ```
-window.addEventListener('mousemove',(e)=>this.move(e))
+window.addEventListener('mousemove',(e)=>this.move(e)) //这个是增加监听 '鼠标'
 和
-window.removeEventListener('mousemove',(e)=>this.move(e))
+window.removeEventListener('mousemove',(e)=>this.move(e)) //这个是销毁监听 '鼠标'
 ```
-这样是不行的，因为他们指定的不算是同一个方法，也就是说，我们不能使用这样传参的方式！
+这样是不行的，因为他们指定的不算是同一个方法，也就是说，我们不能使用`this.move(e)`这样传参的方式！(虽然我们监听的目的是为了传参数e)
 
-但是监听就是为了得到参数，不过根据试验，可以使用下面这样的方式👇  
+根据试验，可以使用下面这样的方式👇  
 ```
 window.addEventListener('mousemove',this.move)
 和
 window.removeEventListener('mousemove',this.move)
 ```
-也就是说 不用传参，在`methods`中的`move(e)`直接就可以拿到参数`e`了  
-而且也不要使用匿名函数。
+也就是说，在`methods`中的`move(e)`直接就可以拿到参数`e`了  👇
+```
+methods:{
+    move(e){
+        console.log(e)
+    }
+},
+```
+**而且也不要使用匿名函数。**
 
 这样就可以销毁监听了。
 

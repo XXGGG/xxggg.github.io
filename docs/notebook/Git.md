@@ -2,7 +2,7 @@
 # 🥝Git🥝
 
 ## 查阅表👇
-![](https://raw.githubusercontent.com/XXGGG/IHS/main/img/git.png)
+![](https://gitee.com/XXGGG/img/raw/master/img/git.png)
 
 
 ## 🟢 安装?! 

@@ -1,24 +1,22 @@
 ---
-title: 【折腾记录01】一个本地代码仓库push到两个代码管理平台
+title: 【XXG学习记录01】一个本地代码仓库push到两个代码管理平台
 author: '谢夏戈'
 date: 2020-08-15
 sidebar: 'auto'
 categories:
- - 折腾记录
-
-tags:
- - Git
- - GitHub
+ - 学习记录
 ---
 
 
-## 遇到的问题
+## 前言
 
 今天是2020年8月14号 不过已经过了凌晨0点，所以现在是15号 凌晨一点多。   
 最近通过VuePress 搭建了一个个人的博客 通过Github pages 部署了网站  
 
-[github-博客](https://xxggg.github.io)
-[gitee-博客](https://xxggg.gitee.io)
+[博客（GitHub）](https://xxggg.github.io)  
+[博客（Gitee）](https://xxggg.gitee.io)
+
+![](https://gitee.com/XXGGG/img/raw/master/img/blog1-0.png)
 
 但是得翻墙，挂vpn，才能打开。通过网上了解，似乎之前不用。但我还是遇到了这个问题，如果我想把我的博客给我的朋友看，那他们还要翻墙，那岂不是很麻烦。
 ‘码云’也有类似Github pages的功能 （码云国内的 所以不用翻墙）  
@@ -93,7 +91,7 @@ tags:
 ## 关于git pull
 方法二和三 在pull的 只能从第一个url地址拉取代码
 
-## 最后（无关紧要）
+## 最后
 虽然我的代码既保存在了GitHub 又保存到了码云。但是还是达不到我的目的。    
 
 因为我的博客是用GitHub actions 从分支自动打包上传到master主分支的  
@@ -108,6 +106,5 @@ tags:
 
 也就是说 我得看看‘码云’有没有类似‘GitHub actions’这类，或者是第三方插件来解决这个问题
 
-这个问题留给下一篇文章。   
-关于如何写GitHub pages 和 Gitee pages （官网都说得很清楚）
+这个问题留给下一篇。
 
