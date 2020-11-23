@@ -1,4 +1,6 @@
-# 🥝commit规范🥝
+---
+title:  🥝commit规范🥝
+---
 
 ## 🟢〖提前总结〗
 ❗ 目前正在使用的就是：  
@@ -77,7 +79,6 @@ gitmoji ➕ 大写字母标识 ➕ 大致修改的内容与文件
 🔇|	:mute:	            |移除日志
 [https://github.com/carloscuesta/gitmoji/](https://github.com/carloscuesta/gitmoji/)
 
-![](../../.vuepress/public/img/note/gitmoji_img.png)
 
 
 ---
@@ -168,7 +169,6 @@ npm i -g gitmoji-cli
 ```
 
 或者使用vs code 的gitmoji
-![](../../.vuepress/public/img/note/gitmoji_img.png)
 >还是使用这个吧 当然使用vs code还是比较少用的 毕竟自己经常按 git commit -m 'xxx'
 但是如果不使用这个 图标对应是什么意思就很难理解 
 

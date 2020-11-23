@@ -1,9 +1,9 @@
+---
+title: 🥝『Git』🥝
+---
 
-# 🥝Git🥝
-
-## 查阅表👇
+## 常用命令查阅表👇
 ![](https://gitee.com/XXGGG/img/raw/master/img/git.png)
-
 
 ## 🟢 安装?! 
 - [参考网址](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)    

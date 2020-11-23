@@ -1,4 +1,6 @@
-# 🍉Vue-router🍉
+---
+title: 🍍『Vue-router』🍍
+---
 
 这个就是vue官方的路由，一般我配合着vue-cli来用。当然也可以在安装vue-cli的时候直接安装埋。
 

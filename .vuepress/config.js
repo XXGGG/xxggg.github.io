@@ -30,7 +30,18 @@ module.exports = {
       {
         "text": "小笔记",
         "icon": "reco-blog",
-        "link": "/docs/notebook/"
+        // "link": "/docs/notebook/"
+        "items": [
+          {"text": "🔮🔮🔮🔮🔮🔮🔮",  
+           "items": [
+              { "text": "『编程小笔记』", "link": "/docs/notebook/config/"},
+              { "text": "『CSS』", "link": "/docs/notebook/CSS/"},
+              { "text": "『HTML』", "link": "/docs/notebook/HTML/"},
+              { "text": "『JavaScript』", "link": "/docs/notebook/JavaScript/"},
+              { "text": "『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
+           ]
+          }
+        ]
       },
       {
         "text": "小黄鸭",
@@ -38,10 +49,10 @@ module.exports = {
         "link": "/docs/BathDuck/"
       },
       {
-        "text": "项目",
+        "text": "我的作品",
         "icon": "reco-api",
         "items": [
-          {"text": "🍋🍋🍋🍋🍋🍋🍋",  "items": [{ "text": "【项目笔记】", "link": "/docs/project/"}]}, 
+          {"text": "🍋🍋🍋🍋🍋🍋🍋",  "items": [{ "text": "【作品说明】", "link": "/docs/project/"}]}, 
           {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
               { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'},
@@ -83,31 +94,6 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/docs/notebook/": [
-        "",  
-        "【HTML】",
-        "【CSS】",
-        "【JavaScript】",
-        "【flex】",
-
-        "commit规范",
-        "Git",
-        "SSH-公钥私钥",  
-        "Sass",
-
-        "vue2.x",
-        "vue3.0",
-        "vue-cli 3",
-        "vue-router",
-        "vue-vuex",
-        "Vue-axios",
-
-        
-        "【学习笔记】",
-        "【HTML】学习笔记",
-        "【CSS】学习笔记",
-        "【JavaScript】学习笔记",
-      ],
       "/docs/BathDuck/": [
         "",
         "0001什么是",
@@ -123,6 +109,38 @@ module.exports = {
         "",
         "Veronica",
         "Demo"
+      ],
+
+      "/docs/notebook/config/": [
+        "",
+        "Git",
+        "SSH-公钥私钥",
+        "commit规范"
+      ],
+      "/docs/notebook/CSS/": [
+        "",
+        "CSS常用代码",
+        "CSS常用代码片段",
+        "CSS完整笔记",
+        "flex",
+        "Sass",
+      ],
+      "/docs/notebook/HTML/": [
+        "",
+        "HTML",
+        "HTML完整笔记",
+      ],
+      "/docs/notebook/JavaScript/": [
+        "",
+        "JavaScript",
+        "JavaScript完整笔记",
+      ],
+      "/docs/notebook/Vue/": [
+        "",
+        "vue-cli 3.x",
+        "vue-axios",
+        "vue-router",
+        "vue-vuex",
       ],
     },
     "type": "blog",
