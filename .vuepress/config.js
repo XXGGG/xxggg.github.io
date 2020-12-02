@@ -53,11 +53,22 @@ module.exports = {
         "text": "我的作品",
         "icon": "reco-api",
         "items": [
-          {"text": "🍋🍋🍋🍋🍋🍋🍋",  "items": [{ "text": "【作品说明】", "link": "/docs/project/"}]}, 
+          {"text": "🍋🍋🍋🍋🍋🍋🍋",  
+           "items": [
+              { "text": "【Veronica说明】", "link": "/docs/project/Veronica.md"},
+              { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank' },
+           ]
+          }, 
           {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
-              { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank'},
-              { "text": "💠 vue2-demo", "link": "https://xxggg.gitee.io/vue2-demo/","target":'_blank'}
+              { "text": "【Demo说明】", "link": "/docs/project/Demo.md" },
+              { "text": "💠 Demo", "link": "https://xxggg.gitee.io/vue2-demo/","target":'_blank'}
+           ]
+          },
+          {"text": "🍑🍑🍑🍑🍑🍑🍑",  
+           "items": [
+              { "text": "【XG词典说明】", "link": "/docs/project/XGDict.md" },
+              { "text": "💠 XG词典", "link": "http://xxggg.gitee.io/xgdict/#/","target":'_blank'}
            ]
           }
         ]
@@ -109,7 +120,8 @@ module.exports = {
       "/docs/project/": [
         "",
         "Veronica",
-        "Demo"
+        "Demo",
+        "XGDict"
       ],
 
       "/docs/notebook/config/": [
@@ -146,6 +158,7 @@ module.exports = {
       "/docs/notebook/Node/": [
         "",
         "Node搭建服务器流程",
+        "Node外网访问本地服务器",
       ],
     },
     "type": "blog",

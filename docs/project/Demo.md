@@ -1,11 +1,11 @@
-# demo - 【作品展览】
+# Demo - 【作品展览】
 
 制作/测试 一些有趣的布局，或者是css效果，或者是测试一下工具的用法！  
 
 ---
 
-项目作品展览地址：[vue2-demo](https://xxggg.gitee.io/vue2-demo/#/)   
-源代码都在 [GitHub【vue2-demo】](https://github.com/XXGGG/vue2-demo/tree/master/src/views/test)  
+项目作品展览地址：[Demo](https://xxggg.gitee.io/vue2-demo/#/)   
+源代码都在 [GitHub【Demo】](https://github.com/XXGGG/vue2-demo/tree/master/src/views/test)  
 
 ## 水滴效果（drop）
  "水滴效果"最重要的一个css是👇 高斯模糊！ 
