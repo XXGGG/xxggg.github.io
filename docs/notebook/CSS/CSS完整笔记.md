@@ -74,7 +74,7 @@ title: 🍇『CSS 完整笔记』🍇
 > 配合下面这个一起
 
     div:hover{
-        animation: xxg 5s ease-out .2s;{animation 是所有功能简写}
+        animation: xxg 5s ease-out .2s; //animation 是所有功能简写
     }
 #### 🔵 调用那个功能
     animation-name: xxg;            

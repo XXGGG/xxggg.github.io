@@ -154,6 +154,7 @@ module.exports = {
         "vue-axios",
         "vue-router",
         "vue-vuex",
+        "Vite",
       ],
       "/docs/notebook/Node/": [
         "",

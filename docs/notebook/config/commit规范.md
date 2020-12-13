@@ -2,9 +2,16 @@
 title:  🥝commit规范🥝
 ---
 
-## 🟢〖提前总结〗
-❗ 目前正在使用的就是：  
-gitmoji ➕ 大写字母标识 ➕ 大致修改的内容与文件
+## 🟢〖前言〗
+
+“commit规范” 就是在使用 `git commit` 的时候提交此次提交的附带信息  
+
+为了让提交的信息不那么死板、混乱、没有规则。
+👇
+
+❗ 目前我个人正在使用的就是：
+
+    gitmoji ➕ 大写字母标识 ➕ 大致修改的内容与文件
 ### 使用gitmoji
 1. 使用gitmoji  - vs code工具（直接去商店搜）
 2. 搭配自己一套标准
@@ -26,6 +33,7 @@ gitmoji ➕ 大写字母标识 ➕ 大致修改的内容与文件
 
 至于我自己还是挺喜欢emoji来提交代码的 先酱！🤭 
 
+---
 |样式|	代码|	含义|
 |:-:|:-:|:-:|
 🎨|	:art:               |改进代码结构/格式
@@ -74,9 +82,10 @@ gitmoji ➕ 大写字母标识 ➕ 大致修改的内容与文件
 💡|	:bulb:	            |记录源代码
 🍻|	:beers:	            |醉着写代码
 💬|	:speech_balloon:	|更新文字
-🗃️|	:card_file_box:	|执行数据库相关更改
+🗃️| :card_file_box:	|执行数据库相关更改
 🔉|	:loud_sound:	    |添加日志
 🔇|	:mute:	            |移除日志
+
 [https://github.com/carloscuesta/gitmoji/](https://github.com/carloscuesta/gitmoji/)
 
 
@@ -85,7 +94,6 @@ gitmoji ➕ 大写字母标识 ➕ 大致修改的内容与文件
 
 >下面是一些找到，看到的文章。关于如何规范commit的。  
 业内比较规范的比如angular团队的规范，还有一些检查你规不规范的机制......  
-（可以不用看）
 
 ---
 
