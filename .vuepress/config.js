@@ -39,7 +39,7 @@ module.exports = {
               { "text": "『HTML』", "link": "/docs/notebook/HTML/"},
               { "text": "『JavaScript』", "link": "/docs/notebook/JavaScript/"},
               { "text": "『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
-              { "text": "『Node』搭建服务器流程", "link": "/docs/notebook/Node/",},
+              // { "text": "『Node』搭建服务器流程", "link": "/docs/notebook/Node/",},
            ]
           }
         ]
@@ -156,11 +156,11 @@ module.exports = {
         "vue-vuex",
         "Vite",
       ],
-      "/docs/notebook/Node/": [
-        "",
-        "Node搭建服务器流程",
-        "Node外网访问本地服务器",
-      ],
+      // "/docs/notebook/Node/": [
+      //   "",
+      //   "Node搭建服务器流程",
+      //   "Node外网访问本地服务器",
+      // ],
     },
     "type": "blog",
     // "blogConfig": {
