@@ -157,6 +157,8 @@ module.exports = {
         "",
         "JavaScript",
         "JavaScript完整笔记",
+        "rem",
+        "数组",
       ],
       "/docs/notebook/Vue/": [
         "",
@@ -165,6 +167,8 @@ module.exports = {
         "vue-router",
         "vue-vuex",
         "Vite",
+        "vue中图片引入问题",
+        "api接口单独文件",
       ],
       "/docs/notebook/NodeXXG/": [
         "",

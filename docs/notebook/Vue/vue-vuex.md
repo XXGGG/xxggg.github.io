@@ -80,8 +80,8 @@ new Vue({
 
 ---
 
-# 🟢【State】
-## 🟢 在 Vue 组件中获得 Vuex 状态
+## 🟢【State】
+### 🔵 在 Vue 组件中获得 Vuex 状态
 ```js
 computed: {
     count () {
@@ -92,7 +92,7 @@ computed: {
 >conputed 在计算属性里面得到这个
 
 
-## 🔵【mapState 辅助函数】
+### 🔵【mapState 辅助函数】
 
 ```js
 // 在单独构建的版本中辅助函数为 Vuex.mapState
@@ -116,7 +116,7 @@ export default {
 ```
 >上面这几个没怎么用过......  
 >**可以理解为“状态”随时会改变所以把它放在`computed`这个计算属性里**
-## 🟢 对象展开运算符
+### 🔵 对象展开运算符
 >在vue 的构造器里边只能有一个computed属性，如果你写多个，只有最后一个computed属性可用，所以写的computed属性进行一个改造。改造时我们使用ES6中的展开运算符"…"。
 ```js
 //👇 这样写
@@ -130,17 +130,17 @@ computed: {
 
 
 ---
-# 🟢【Mutation】
+## 🟢【Mutation】
 >用来修改 状态 ！
-### 🟢 调用方法
+### 🔵 调用方法
 ```js
 store.commit('方法名')
 ```
-### 🟢 提交参数（Payload）
+### 🔵 提交参数（Payload）
 ```js
 store.commit('方法名', 10)
 ```
-### 🟢【Mutation 辅助函数】
+### 🔵【Mutation 辅助函数】
 >在vue 的构造器里边只能有一个computed属性，如果你写多个，只有最后一个computed属性可用，所以写的computed属性进行一个改造。改造时我们使用ES6中的展开运算符"…"。
 ```js
 import { mapMutations } from 'vuex'
@@ -161,7 +161,7 @@ export default {
 ```
 > **前面的mapState在computed里，而mapMutations是在methods方法里**  
 
-### mutation 都是同步事务：
+### 🔵 mutation 都是同步事务：
 ```js
 store.commit('add')
 // 任何由 "add" 导致的状态变更都应该在此刻完成。
@@ -169,7 +169,7 @@ store.commit('add')
 ---
 
 
-# 🔵【Getter】
+## 🟢【Getter】
 >getters从表面是获得的意思，可以把他看作在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工。可以把它看作store.js的计算属性。
 ```js
 const store = new Vuex.Store({
@@ -193,7 +193,7 @@ const store = new Vuex.Store({
   }
 })
 ```
-### 🟡 通过属性访问
+### 🔵 通过属性访问
 Getter 会暴露为 store.getters 对象，你可以以属性的形式访问这些值：
 ```js
 store.getters.count // -> 101
@@ -201,7 +201,7 @@ store.getters.count // -> 101
 ```html
 <div>{{$store.getters.count}}</div>
 ```
-### Getter 也可以接受其他 getter 作为第二个参数：
+### 🔵 Getter 也可以接受其他 getter 作为第二个参数：
 ```js
 getters: {
   // ...
@@ -223,7 +223,7 @@ computed: {
 ```
 注意，getter 在通过属性访问时是作为 Vue 的响应式系统的一部分缓存其中的。
 
-### 🟡 通过方法访问
+### 🔵 通过方法访问
 ```js
 getters: {
   // ...
@@ -238,7 +238,7 @@ store.getters.getTodoById(2) // -> { id: 2, text: '...', done: false }
 注意，getter 在通过方法访问时，每次都会去进行调用，而不会缓存结果。
 
 
-## 🟡 `mapGetters` 辅助函数
+### 🔵 `mapGetters` 辅助函数
 >在vue 的构造器里边只能有一个computed属性，如果你写多个，只有最后一个computed属性可用，所以写的computed属性进行一个改造。改造时我们使用ES6中的展开运算符"…"。  
 
 `mapGetters` 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：
@@ -262,8 +262,7 @@ export default {
 ---
 
 
-
-# 🟡【Action】
+## 🟢【Action】
 
 - Action 提交的是 mutation，而不是直接变更状态。
 - Action 可以包含任意异步操作。
@@ -300,7 +299,7 @@ const store = new Vuex.Store({
 
 Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象，因此你可以调用 context.commit 提交一个 mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters。当我们在之后介绍到 Modules 时，你就知道 context 对象为什么不是 store 实例本身了。
 
-### 调用👇 【mapActions辅助函数】
+### 🔵 调用👇 【mapActions辅助函数】
 ```html
 <p>
   <button @click="addAction(可以加参数)">+</button>
@@ -318,7 +317,7 @@ methods:{
 },
 ```
 
-### **增加异步检验**  👇
+### 🔵 增加异步检验
 我们现在看的效果和我们用Mutations作的一模一样，肯定有的小伙伴会好奇，那actions有什么用，我们为了演示actions的异步功能，我们增加一个计时器（setTimeOut）延迟执行。在addAction里使用setTimeOut进行延迟执行。
 ```js
 setTimeOut(()=>{context.commit(reduce)},3000);
@@ -329,7 +328,7 @@ console.log('我比reduce提前执行');
 而使用actions异步就是，你这边还要三秒后才执行，那就先等着，我先执行下面的，等三秒后我再回来执行你这个破鬼任务~
 ---
 
-## 🟡 分发 Action （也就是使用、调用）
+### 🔵 分发 Action （也就是使用、调用）
 Action 通过 `store.dispatch` 方法触发：
 ```js
 store.dispatch('increment')
@@ -367,7 +366,7 @@ store.dispatch({
 ```
 > 👆 这个和 mutation 一样
 
-## 🟡 在组件中分发 Action
+### 🔵 在组件中分发 Action
 ```js
 import { mapActions } from 'vuex'
 
@@ -388,7 +387,7 @@ export default {
 ```
 >跟其他的分发一样.....
 
-## 🟡 组合 Action
+### 🔵 组合 Action
 Action 通常是异步的，那么如何知道 action 什么时候结束呢？更重要的是，我们如何才能组合多个 action，以处理更加复杂的异步流程？
 
 首先，你需要明白 store.dispatch 可以处理被触发的 action 的处理函数返回的 Promise，并且 store.dispatch 仍旧返回 Promise：
@@ -438,7 +437,7 @@ actions: {
 ```
 一个 store.dispatch 在不同模块中可以触发多个 action 函数。在这种情况下，只有当所有触发函数完成后，返回的 Promise 才会执行。
 
-# 🟡【Module】
+## 🟢【Module】
 
 随着项目的复杂性增加，我们共享的状态越来越多，这时候我们就需要把我们状态的各种操作进行一个分组，分组后再进行按组编写。
 

@@ -2,7 +2,7 @@
 title: 🍇『iconfont』🍇
 --- 
 
-## 【iconfont】！🐱
+## 🟢【iconfont】！🐱
 
 其实iconfont就是字体！是一种图案字体！
 
@@ -23,9 +23,9 @@ title: 🍇『iconfont』🍇
 ```
 
 
-## unicode、fontclass 和 symbol的区别
+## 🟢 unicode、fontclass 和 symbol的区别
 
-### Unicode - 字体
+### 🔵 Unicode - 字体
 - 没有颜色
 - 兼容性好  
 使用方法：👇 先拷贝生成好的font-face  
@@ -54,7 +54,7 @@ title: 🍇『iconfont』🍇
 
 ---
 
-### Font class
+### 🔵 Font class
 - 兼容还行
 - 直观
 - 单色~
@@ -68,7 +68,7 @@ title: 🍇『iconfont』🍇
 
 ---
 
-### Symbol 【未来的趋势~！！！！】
+### 🔵 Symbol 【未来的趋势~！！！！】
 - 支持多色~
 - 兼容性差 （so~ 又如何~）
 - 浏览器渲染svg的性能一般，还不如png。  
@@ -96,14 +96,14 @@ title: 🍇『iconfont』🍇
     <use xlink:href="#icon-xxx"></use>
 </svg>
 ```
->这个使用的方法感觉还可以优化，或封装一个js文件来调用，要不每次都得写或者复制这么一大串代码....来使用......
+>这个使用的方法感觉还可以优化，或封装一个js文件来调用，要不每次都得写或者复制这么一大串代码....来使用......   
 
-### 【Symbol的封装】
-参考：[https://blog.csdn.net/qq_41883689/article/details/109383716](https://blog.csdn.net/qq_41883689/article/details/109383716)  
+### 🔵 【Symbol的封装】
+参考：[https://blog.csdn.net/qq_41883689/article/details/109383716](https://blog.csdn.net/qq_41883689/article/details/109383716)      
 
 
 
-## 最后👇
+## 🟢 最后👇
 
 - 如果iconfont图标不够了 可以继续去挑选 - 添加到项目
 - 然后重新生成【链接】，引入【链接】。

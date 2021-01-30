@@ -1,33 +1,33 @@
 ---
 title: 🍒『Node 搭建服务器流程』🍒 
 ---
-## 前言
+## 🟢 前言
 整个流程是我自己用来反复练习而写的   
 学习了node.js 也了解了很多关于node的知识，所以跟着视频学习了使用node来搭建一个本地的服务器。👇
 
-### 1. 新建文件夹 - xxg 
-### 2. npm初始化
+### 🔵 1. 新建文件夹 - xxg 
+### 🔵 2. npm初始化
 ```sl
 npm init -y
 ```
-### 3. git初始化
+### 🔵 3. git初始化
 ```sl
 git init （如果不使用github git 可以不初始化）
 ```
-### 4. 安装插件
+### 🔵 4. 安装插件
 ```sl
 npm install express -S 【node框架】
 npm install nodemon -D 【自动检测文件变化,热加载】
 ```
 - express是node框架可以快速搭建起服务。  
 - nodemon 可以在你修改文件的时候，热加载，不用每次都重新启动服务。（有助于开发，所以用-D 添加到dev开发时期）
-### 5. 配置 package.json 👇（关于nodemon）
+### 🔵 5. 配置 package.json 👇（关于nodemon）
 ```json
 "scripts": {
     "dev":"nodemon src/app",
 },
 ```
-### 6. 新建文件夹 xxg/src
+### 🔵 6. 新建文件夹 xxg/src
 
 - 用来放源文件xxg/src/app.js 然后在文件里面写👇  
 ![](https://gitee.com/XXGGG/img/raw/master/img/node1.png)   
@@ -43,7 +43,7 @@ npm install nodemon -D 【自动检测文件变化,热加载】
 
 **至此我们的服务就完成了，因为我们已经可以使用浏览器来访问到我们的接口了，但是！我们还没有写具体功能的接口，还有很多事情没有做，让我们继续👇**
 
-### 7. 安装 关于数据库和配置接口的插件
+### 🔵 7. 安装 关于数据库和配置接口的插件
 - npm install sequelize -S 【node库】
 - npm install sequelize-cli -S 【sequelize脚手架】
 - npm install mysql2 【sequelize的驱动】  
@@ -85,7 +85,7 @@ npm install nodemon -D 【自动检测文件变化,热加载】
 - npm install body-parser 【app.js中间件 - 接收body】
 
 		
-### 8.一些小处理👇
+### 🔵 8.一些小处理👇
 
 在写正式的接口前，说三点
 1. 先把db/migrations里的文件默认的 createdAt 跟 updatedAt 删掉  
@@ -122,7 +122,7 @@ app.use 这个use也是跟all一样接收所有类型 然后过滤一遍，在�
 
 ---
 
-### 9. 真的真的，这次真的写接口了
+### 🔵 9. 真的真的，这次真的写接口了
 【增】【删】【改】【查】👇 
 
 1. 【增】  
@@ -150,7 +150,7 @@ app.use 这个use也是跟all一样接收所有类型 然后过滤一遍，在�
 ![](https://gitee.com/XXGGG/img/raw/master/img/node13.png)
 
 
-### 9.【命令代码小总结】
+### 🔵 9.【命令代码小总结】
 - 都要用try
 - post 接收是 req.body
 - get 接收是 req.params
@@ -170,7 +170,7 @@ app.use 这个use也是跟all一样接收所有类型 然后过滤一遍，在�
 
 ---
 
-### 10. postman - 调试
+### 🔵 10. postman - 调试
 
 那么以上就可以使用 postman 这个工具 来根据不同的 接口
 比如什么 
@@ -183,7 +183,7 @@ app.use 这个use也是跟all一样接收所有类型 然后过滤一遍，在�
 记得【get的话要使用 get】
 
 
-### 11. 跨域
+### 🔵 11. 跨域
 其实对于跨域的知识，我还不是很清楚。  
 大致知道同源跨域的意思（毕竟百度一下都有说）  
 
@@ -210,7 +210,7 @@ app.all('*', function(req, res, next) {
 });
 ```
 
-### 暂告一段落
+### 🔵 暂告一段落
 
 后面再继续探讨，当前端网页写完，放到github page 时，还如何来调用 本地的服务器
 

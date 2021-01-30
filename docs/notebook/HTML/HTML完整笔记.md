@@ -5,41 +5,41 @@ title: 🍓『HTML完整笔记』🍓
 
 关于HTML整理的知识
 
-## 🔵 sessionStorage
+## 🟢 sessionStorage
 
-### 保存数据语法：
+### 🔵 保存数据语法：
 ```js
 sessionStorage.setItem("key", "value");
 [也可以直接 sessionStorage.key = value]
 ```
 
-### 读取数据语法：
+### 🔵 读取数据语法：
 ```js
 var lastname = sessionStorage.getItem("key");
 ```
 
-### 删除指定键的数据语法：
+### 🔵 删除指定键的数据语法：
 ```js
 sessionStorage.removeItem("key");
 ```
 
-### 删除所有数据：
+### 🔵 删除所有数据：
 ```js
 sessionStorage.clear();
 ```
 ---
 
-## 🔵 localStorage
+## 🟢 localStorage
 
-### 保存数据语法：
+### 🔵 保存数据语法：
 ```js
 localStorage.setItem("key", "value");
 ```
-### 读取数据语法：
+### 🔵 读取数据语法：
 ```js
 var lastname = localStorage.getItem("key");
 ```
-### 删除数据语法：
+### 🔵 删除数据语法：
 ```js
 localStorage.removeItem("key");
 ```
@@ -53,7 +53,7 @@ localStorage.removeItem("key");
 
 ---
 
-## 🔵 移动端优化
+## 🟢 移动端优化
 
     <meta 
 		name="viewport" 
