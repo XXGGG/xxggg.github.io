@@ -6,11 +6,11 @@ title: 🥝『Git』🥝
 ![](https://gitee.com/XXGGG/img/raw/master/img/git.png)
 
 ## 🟢【安装】  
-- [参考网址](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)      
+- [参考网址：https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)      
 >windows下的
 
 
-直接[官网下载](https://git-scm.com/downloads),安装完成后，在开始菜单里找到“Git”->“Git Bash”  
+直接[官网下载：https://git-scm.com/downloads](https://git-scm.com/downloads),安装完成后，在开始菜单里找到“Git”->“Git Bash”  
 
     git config --global user.name "你的名字"
     git config --global user.email "你的邮@箱地址.com"

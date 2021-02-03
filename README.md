@@ -12,7 +12,7 @@ heroImageStyle: {
   borderRadius: '50%',
   boxShadow: '0 5px 18px rgba(0,0,0,0.5)'
 }
-bgImage: '/681136.jpg'
+bgImage: '/SeeTheFire.png'
 bgImageStyle: {
   height: '100vh'
 }

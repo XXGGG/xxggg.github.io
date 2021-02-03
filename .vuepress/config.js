@@ -122,7 +122,9 @@ module.exports = {
         "0012什么是【闭包】",
         "0013【css预处理器】",
         "0014什么是【耦合-解耦】",
-        "0015什么是【Promise】"
+        "0015什么是【Promise】",
+        "0016什么是【套壳app】",
+        "0017什么是【webp】"
       ],
       "/docs/project/": [
         "",
@@ -135,7 +137,8 @@ module.exports = {
         "",
         "Git",
         "SSH-公钥私钥",
-        "commit规范"
+        "commit规范",
+        "Vue打包白屏问题"
       ],
       "/docs/notebook/CSS/": [
         "",
@@ -156,12 +159,13 @@ module.exports = {
       "/docs/notebook/JavaScript/": [
         "",
         "JavaScript",
-        "JavaScript完整笔记",
+        "JS笔记",
         "rem",
-        "数组",
+        "JS数组查找",
       ],
       "/docs/notebook/Vue/": [
         "",
+        "Vue",
         "vue-cli 3.x",
         "vue-axios",
         "vue-router",

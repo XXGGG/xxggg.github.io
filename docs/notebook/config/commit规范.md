@@ -32,9 +32,9 @@ title:  🥝commit规范🥝
 
 至于我自己还是挺喜欢emoji来提交代码的 先酱！🤭 
 
-[https://github.com/carloscuesta/gitmoji/](https://github.com/carloscuesta/gitmoji/)
-
 ---
+
+[参考文章：https://github.com/carloscuesta/gitmoji/](https://github.com/carloscuesta/gitmoji/)
 
 
 

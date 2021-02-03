@@ -2,6 +2,11 @@
 title: 🍇『CSS常用代码』🍇
 ---
 
+## 🟢 偏移自身一半
+```css
+transform: translate(-50%, -50%);
+```
+
 ## 🟢 去除a标签下划线
 ```css
 text-decoration:none;
