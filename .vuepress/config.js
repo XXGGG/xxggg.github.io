@@ -70,6 +70,11 @@ module.exports = {
               { "text": "【XG词典说明】", "link": "/docs/project/XGDict.md" },
               { "text": "💠 XG词典", "link": "http://xxggg.gitee.io/xgdict/#/","target":'_blank'}
            ]
+          },
+          {"text": "🍱【Demo系列】🍱",  
+           "items": [
+              { "text": "前程无忧 - 移动端网页版", "link": "https://xxggg.github.io/Demo_cubeUI_51job_m/#/","target":'_blank'}
+           ]
           }
         ]
       },
