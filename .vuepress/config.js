@@ -40,6 +40,8 @@ module.exports = {
               { "text": "『JavaScript』", "link": "/docs/notebook/JavaScript/"},
               { "text": "『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
               { "text": "『Node』搭建服务器流程", "link": "/docs/notebook/NodeXXG/",},
+              { "text": "『Python』爬虫", "link": "/docs/notebook/Python/",},
+              { "text": "『MySQL』数据库", "link": "/docs/notebook/MySQL/",},
            ]
           }
         ]
@@ -183,6 +185,23 @@ module.exports = {
         "",
         "Node搭建服务器流程",
         "Node外网访问本地服务器",
+      ],
+      "/docs/notebook/Python/": [
+        "",
+        "python01.md",
+        "python02.md",
+        "python03.md",
+        "python04.md",
+        "python05.md",
+        "python06.md",
+        "python07.md",
+        "python08.md",
+        "爬虫第零步.md",
+        "爬虫第一步.md",
+      ],
+      "/docs/notebook/MySQL/": [
+        "",
+        "SQL.md",
       ],
     },
     "type": "blog",
