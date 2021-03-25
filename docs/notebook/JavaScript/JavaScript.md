@@ -1,5 +1,5 @@
 ---
-title: 🍉『JavaScript』🍉
+title: 🍋『JavaScript』🍋
 ---
 ## 🟢 定时器
 ```js

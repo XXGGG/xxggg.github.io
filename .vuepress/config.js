@@ -35,8 +35,8 @@ module.exports = {
           {"text": "🔮🔮🔮🔮🔮🔮🔮",  
            "items": [
               { "text": "『编程小笔记』", "link": "/docs/notebook/config/"},
-              { "text": "『CSS』", "link": "/docs/notebook/CSS/"},
               { "text": "『HTML』", "link": "/docs/notebook/HTML/"},
+              { "text": "『CSS』", "link": "/docs/notebook/CSS/"},
               { "text": "『JavaScript』", "link": "/docs/notebook/JavaScript/"},
               { "text": "『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
               { "text": "『Node』搭建服务器流程", "link": "/docs/notebook/NodeXXG/",},
@@ -64,7 +64,7 @@ module.exports = {
           {"text": "🥭🥭🥭🥭🥭🥭🥭",  
            "items": [
               { "text": "【Demo说明】", "link": "/docs/project/Demo.md" },
-              { "text": "💠 Demo", "link": "https://xxggg.gitee.io/vue2-demo/","target":'_blank'}
+              { "text": "💠 Demo", "link": "https://xxggg.gitee.io/demo/","target":'_blank'}
            ]
           },
           {"text": "🍑🍑🍑🍑🍑🍑🍑",  
@@ -137,7 +137,8 @@ module.exports = {
         "",
         "Veronica",
         "Demo",
-        "XGDict"
+        "XGDict",
+        "The"
       ],
 
       "/docs/notebook/config/": [
@@ -202,6 +203,8 @@ module.exports = {
       "/docs/notebook/MySQL/": [
         "",
         "SQL.md",
+        "MySQL.md",
+        "Python-MySQL.md",
       ],
     },
     "type": "blog",

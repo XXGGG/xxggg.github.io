@@ -1,5 +1,5 @@
 ---
-title: 🍉『JS数组删除』🍉
+title: 🍋『JS数组删除』🍋
 ---
 
 JavaScript中数组元素删除的七大方法汇总
