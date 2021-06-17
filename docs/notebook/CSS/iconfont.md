@@ -6,7 +6,7 @@ title: 🍇『iconfont』🍇
 
 其实iconfont就是字体！是一种图案字体！
 
-1. 进入网站：Iconfont网址：http://www.iconfont.cn
+1. 进入网站：Iconfont网址：[http://www.iconfont.cn](http://www.iconfont.cn)
 2. 点击网站上方的“官方图标库”，选择自己喜欢的图标。
 3. 选择好自己喜欢的图标，两个选择，【下载代码】 和 【添加至项目】。
 4. 选择添加至项目，然后新建项目，并输入名称。

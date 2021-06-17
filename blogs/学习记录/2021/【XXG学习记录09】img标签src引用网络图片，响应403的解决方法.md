@@ -1,5 +1,5 @@
 ---
-title: 【XXG学习记录08】img标签src引用网络图片，响应403的解决方法
+title: 【XXG学习记录09】img标签src引用网络图片，响应403的解决方法
 author: '谢夏戈'
 date: 2021-03-02
 sidebar: 'auto'

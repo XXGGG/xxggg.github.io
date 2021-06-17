@@ -34,7 +34,7 @@ title:  🐱‍💻commit规范🐱‍💻
 
 ---
 
-[参考文章：https://github.com/carloscuesta/gitmoji/](https://github.com/carloscuesta/gitmoji/)
+参考文章：[https://github.com/carloscuesta/gitmoji/](https://github.com/carloscuesta/gitmoji/)
 
 
 

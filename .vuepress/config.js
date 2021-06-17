@@ -21,73 +21,75 @@ module.exports = {
   "theme": "reco",
   "themeConfig": {
     'noFoundPageByTencent': false,
-    "nav": [
+    "nav": [ 
       {
-        "text": "主页",
-        "link": "/",
-        "icon": "reco-home"
-      },    
-      {
-        "text": "小笔记",
-        "icon": "reco-blog",
+        "text": "📕 小笔记",
+        // "icon": "reco-blog",
         // "link": "/docs/notebook/"
         "items": [
-          {"text": "🔮🔮🔮🔮🔮🔮🔮",  
+          {
            "items": [
-              { "text": "『编程小笔记』", "link": "/docs/notebook/config/"},
-              { "text": "『HTML』", "link": "/docs/notebook/HTML/"},
-              { "text": "『CSS』", "link": "/docs/notebook/CSS/"},
-              { "text": "『JavaScript』", "link": "/docs/notebook/JavaScript/"},
-              { "text": "『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
-              { "text": "『Node』搭建服务器流程", "link": "/docs/notebook/NodeXXG/",},
-              { "text": "『Python』爬虫", "link": "/docs/notebook/Python/",},
-              { "text": "『MySQL』数据库", "link": "/docs/notebook/MySQL/",},
+              { "text": "🐱‍💻『编程小笔记』", "link": "/docs/notebook/config/"},
+              { "text": "🍓『HTML』", "link": "/docs/notebook/HTML/"},
+              { "text": "🍇『CSS』", "link": "/docs/notebook/CSS/"},
+              { "text": "🍋『JavaScript』", "link": "/docs/notebook/JavaScript/"},
+              { "text": "🥝『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
+              { "text": "🍐『Node』搭建服务器流程", "link": "/docs/notebook/NodeXXG/",},
+              { "text": "🐍『Python』爬虫", "link": "/docs/notebook/Python/",},
+              { "text": "🐬『MySQL』数据库", "link": "/docs/notebook/MySQL/",},
+              { "text": "👾『Cocos』游戏引擎", "link": "/docs/notebook/Cocos/",},
            ]
           }
         ]
       },
+      // {
+      //   "text": "📘 夏戈记",
+      //   "items": [
+      //     {
+      //      "items": [
+      //         { "text": "『编程小笔记』", "link": "/docs/XGBook/config/"},
+      //      ]
+      //     }
+      //   ]
+      // },
       {
-        "text": "小黄鸭",
-        "icon": "reco-other",
+        "text": "📙 小黄鸭",
+        // "icon": "reco-other",
         "link": "/docs/BathDuck/"
       },
       {
-        "text": "我的作品",
-        "icon": "reco-api",
+        "text": "🍖 小作品",
+        // "icon": "reco-api",
         "items": [
-          {"text": "🍋🍋🍋🍋🍋🍋🍋",  
+          { 
            "items": [
-              { "text": "【Veronica说明】", "link": "/docs/project/Veronica.md"},
-              { "text": "💠 Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank' },
+              { "text": "🖥️【Veronica说明】", "link": "/docs/project/Veronica.md"},
+              { "text": "🖥️ Veronica", "link": "https://xxggg.gitee.io/Veronica/","target":'_blank' },
            ]
           }, 
-          {"text": "🥭🥭🥭🥭🥭🥭🥭",  
+          { 
            "items": [
-              { "text": "【Demo说明】", "link": "/docs/project/Demo.md" },
+              { "text": "💠【Demo说明】", "link": "/docs/project/Demo.md" },
               { "text": "💠 Demo", "link": "https://xxggg.gitee.io/demo/","target":'_blank'}
            ]
           },
-          {"text": "🍑🍑🍑🍑🍑🍑🍑",  
+          {
            "items": [
-              { "text": "【XG词典说明】", "link": "/docs/project/XGDict.md" },
-              { "text": "💠 XG词典", "link": "http://xxggg.gitee.io/xgdict/#/","target":'_blank'}
+              { "text": "📚【XG词典说明】", "link": "/docs/project/XGDict.md" },
+              { "text": "📚 XG词典", "link": "http://xxggg.gitee.io/xgdict/#/","target":'_blank'}
            ]
           },
           {"text": "🍱【Demo系列】🍱",  
            "items": [
-              { "text": "前程无忧 - 移动端网页版", "link": "https://xxggg.github.io/Demo_cubeUI_51job_m/#/","target":'_blank'}
+              { "text": "🐝前程无忧-H5", "link": "https://xxggg.github.io/Demo_cubeUI_51job_m/#/","target":'_blank'}
            ]
           }
         ]
       },
+      
       {
-        "text": "时间线",
-        "link": "/timeline/",
-        "icon": "reco-date"
-      },
-      {
-        "text": "联系",
-        "icon": "reco-message",
+        "text": "☎️ 联系",
+        // "icon": "reco-message",
         "items": [
           {
             "text": "GitHub",
@@ -170,6 +172,8 @@ module.exports = {
         "JS笔记",
         "rem",
         "JS数组查找",
+        "JS数组删除",
+        "JS数学方法",
       ],
       "/docs/notebook/Vue/": [
         "",
@@ -206,6 +210,13 @@ module.exports = {
         "MySQL.md",
         "Python-MySQL.md",
       ],
+      "/docs/notebook/Cocos/": [
+        "",
+        '小笔记.md',
+        'API.md',
+        'function.md',
+        '小技巧.md'
+      ],
     },
     "type": "blog",
     // "blogConfig": {
@@ -232,7 +243,7 @@ module.exports = {
         "link": "https://xxggg.gitee.io"
       }
     ],
-    "logo": "/logo.png",
+    "logo": "/XXG.png",
     "search": true,
     "searchMaxSuggestions": 100,
     "lastUpdated": "最后更新",

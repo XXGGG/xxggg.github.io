@@ -1,8 +1,8 @@
 ---
 home: true
 # heroText: 🍀 谢夏戈的博客 🍀
-heroText: 🍓🍉🍊🍋🥭🍍🍎🥝🍇
-tagline: 🍀 谢夏戈的博客 🍀
+heroText: 🐱‍💻🍓🍇🍋🥝🍐🐍🐬👾
+tagline: 🕷️🐈🍀🐱‍👤🐱‍🏍🐱‍🐉🎮🎹🏹🎨🎼🎥🏓
 # tagline: 🍓🍉🍊🍋🥭🍍🍎🥝🍇
 # heroImage: /hero.png
 heroImageStyle: {
@@ -12,7 +12,7 @@ heroImageStyle: {
   borderRadius: '50%',
   boxShadow: '0 5px 18px rgba(0,0,0,0.5)'
 }
-bgImage: '/SeeTheFire.png'
+# bgImage: '/SeeTheFire.png'
 bgImageStyle: {
   height: '100vh'
 }
