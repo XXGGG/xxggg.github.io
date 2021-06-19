@@ -1,6 +1,6 @@
 module.exports = {
   "title": "谢夏戈的博客",
-  "description": "Welcome",
+  "description": "WELCOME",
   "dest": "public",
   "head": [
     [
@@ -23,7 +23,7 @@ module.exports = {
     'noFoundPageByTencent': false,
     "nav": [ 
       {
-        "text": "📕 小笔记",
+        "text": "📚 小笔记",
         // "icon": "reco-blog",
         // "link": "/docs/notebook/"
         "items": [
@@ -33,8 +33,8 @@ module.exports = {
               { "text": "🍓『HTML』", "link": "/docs/notebook/HTML/"},
               { "text": "🍇『CSS』", "link": "/docs/notebook/CSS/"},
               { "text": "🍋『JavaScript』", "link": "/docs/notebook/JavaScript/"},
-              { "text": "🥝『Vue』项目流程记录", "link": "/docs/notebook/Vue/",},
-              { "text": "🍐『Node』搭建服务器流程", "link": "/docs/notebook/NodeXXG/",},
+              { "text": "🥝『Vue』", "link": "/docs/notebook/Vue/",},
+              { "text": "🍐『Node』", "link": "/docs/notebook/NodeXXG/",},
               { "text": "🐍『Python』爬虫", "link": "/docs/notebook/Python/",},
               { "text": "🐬『MySQL』数据库", "link": "/docs/notebook/MySQL/",},
               { "text": "👾『Cocos』游戏引擎", "link": "/docs/notebook/Cocos/",},
@@ -42,18 +42,27 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   "text": "📘 夏戈记",
-      //   "items": [
-      //     {
-      //      "items": [
-      //         { "text": "『编程小笔记』", "link": "/docs/XGBook/config/"},
-      //      ]
-      //     }
-      //   ]
-      // },
       {
-        "text": "📙 小黄鸭",
+        "text": "🪅 小产品",
+        // "icon": "reco-blog",
+        // "link": "/docs/notebook/"
+        "items": [
+          {
+           "items": [
+              { "text": "📕『商业需求文档-MRD』", "link": "/docs/PmBook/"},
+              { "text": "📗『市场需求文档-BRD』", "link": "/docs/PmBook/"},
+              { "text": "📘『产品需求文档-PRD』", "link": "/docs/PmBook/"},
+              { "text": "🟧『思维导图』", "link": "/docs/PmBook/"},
+              { "text": "🟨『流程图』", "link": "/docs/PmBook/"},
+              { "text": "🟪『拓扑图』", "link": "/docs/PmBook/"},
+              { "text": "✒️『UE/UI-Figma』", "link": "/docs/PmBook/"},
+              { "text": "🪀『原型图-Axure』", "link": "/docs/PmBook/"},
+           ]
+          }
+        ]
+      },
+      {
+        "text": "🐤 小黄鸭",
         // "icon": "reco-other",
         "link": "/docs/BathDuck/"
       },
@@ -243,7 +252,7 @@ module.exports = {
         "link": "https://xxggg.gitee.io"
       }
     ],
-    "logo": "/XXG.png",
+    "logo": "/ge.png",
     "search": true,
     "searchMaxSuggestions": 100,
     "lastUpdated": "最后更新",
