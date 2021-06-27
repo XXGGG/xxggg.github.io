@@ -3,7 +3,9 @@ title:  👾Cocos 方法👾
 ---
 
 
+
 ## 修改鼠标样式的方法
+
 >[参考文章](https://www.jianshu.com/p/5a1a74c8826f)  
 
 设置一个【脚本ts】挂载到【根节点Canvas】上
@@ -23,10 +25,22 @@ mouseStart(){
 然而图片的路径 要使用一些别的方法来获得，不能使用`assets/Texture/xxx.png`，至于路径找到的方法，可以先把这张图片拖进随便一个地方，然后用浏览器运行游戏后按F12在资源里找路径。(这是目前知道的方法)
 
 
+
+
 ## 修改背景图片
 
 
+
+
+
+
+
+
+
+
+
 ## 点击后出配音、音效
+
 ```ts
 @property(cc.AudioClip)
 audio: cc.AudioClip = null;

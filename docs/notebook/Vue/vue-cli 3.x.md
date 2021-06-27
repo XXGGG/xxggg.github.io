@@ -1,5 +1,5 @@
 ---
-title: 🍍『Vue-cli 3.x』🍍
+title: 🥝『Vue-cli 3.x』🥝
 ---
 
 vue-cli 3  与 2有很多相同的地方，也有很多不同的地方

@@ -1,10 +1,10 @@
 ---
-title: 【XXG学习记录08】用js判断移动端还是桌面端
+title: 【XG编程08】用js判断移动端还是桌面端
 author: '谢夏戈'
 date: 2021-02-20
 sidebar: 'auto'
 categories:
- - 学习记录
+ - Js
 ---
 
 

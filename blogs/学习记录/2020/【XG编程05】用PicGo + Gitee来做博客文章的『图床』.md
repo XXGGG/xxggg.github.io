@@ -1,10 +1,12 @@
 ---
-title: 【XXG学习记录05】用PicGo + Gitee来做博客文章的『图床』
+title: 【XG编程05】用PicGo + Gitee来做博客文章的『图床』
 author: '谢夏戈'
 date: 2020-11-25
 sidebar: 'auto'
 categories:
- - 学习记录
+ - PicGo
+ - Gitee
+ - 图床
 ---
 
 ## 前言
@@ -24,20 +26,20 @@ github 也可以，但是我实验了下，图片有时候会挂，介于在国�
 - [或者点这个](https://github.com/Molunerfinn/PicGo/releases)
 
 然后Windows的点击这个下载
-![](https://gitee.com/XXGGG/img/raw/master/img/blog5-0.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog5-0.png)
 
 
 ## 安装之后打开主界面并且搜索gitee插件👇
 
 - gitee-uploader 
 
-![](https://gitee.com/XXGGG/img/raw/master/img/blog5-1.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog5-1.png)
 
---- 
+---
 
 - 安装插件完后 -> 重启软件, 然后在图床设置选择gitee👇
 
-![](https://gitee.com/XXGGG/img/raw/master/img/blog5-2.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog5-2.png)
 
 - 记得要在gitee上开一个账号且创建一个用来放这些照片的仓库👇
 - repo 就是gitee账号下的仓库地址（记得仓库是要设置公开的）
@@ -46,13 +48,13 @@ github 也可以，但是我实验了下，图片有时候会挂，介于在国�
 
 **在设置里 然后选👇**  
 
-![](https://gitee.com/XXGGG/img/raw/master/img/blog5-3.png)
-![](https://gitee.com/XXGGG/img/raw/master/img/blog5-4.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog5-3.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog5-4.png)
 
 
 **然后只需要选👇**
 
-![](https://gitee.com/XXGGG/img/raw/master/img/blog5-5.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog5-5.png)
 
 提交后生成的 私人令牌只会显示一次，复制到刚刚的 token 就可以了
 

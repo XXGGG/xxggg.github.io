@@ -17,17 +17,10 @@
 
 **主要用于自用或者给朋友用** 
 
-![Veronica01](../../.vuepress/public/img/project/Veronica01.png)
+![Veronica01](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/Veronica01.png)
 
-![Veronica02](../../.vuepress/public/img/project/Veronica02.png)
+![Veronica02](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/Veronica02.png)
 
-
----
-## 名字灵感来源
-
-![Veronica03](../../.vuepress/public/img/project/Veronica03.png)  
-![Veronica04](../../.vuepress/public/img/project/Veronica04.png)   
-![Veronica05](../../.vuepress/public/img/project/Veronica05.png)   
-![Veronica06](../../.vuepress/public/img/project/Veronica06.png)  
 
 ---
+

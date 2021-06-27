@@ -1,10 +1,10 @@
 ---
-title: 【XXG学习记录07】vue 强制刷新组件
+title: 【XG编程07】Vue强制刷新组件
 author: '谢夏戈'
 date: 2021-02-13
 sidebar: 'auto'
 categories:
- - 学习记录
+ - Vue
 ---
 
 

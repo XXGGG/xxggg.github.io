@@ -1,5 +1,5 @@
 ---
-title: 🍍『Vue-router』🍍
+title: 🥝『Vue-router』🥝
 ---
 
 [【参考文章】](https://www.jspang.com/detailed?id=25)
@@ -48,7 +48,7 @@ export default new Router({
 在模板里要跳转的链接 肯定是使用
 ```html
 <router-link to="/xxg">Go to xxg</router-link>
-``` 
+```
 这样的方式~
 ```js
 //src/router/index.js

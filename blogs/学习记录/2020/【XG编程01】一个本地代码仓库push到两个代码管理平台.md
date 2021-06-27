@@ -1,10 +1,12 @@
 ---
-title: 【XXG学习记录01】一个本地代码仓库push到两个代码管理平台
+title: 【XG编程01】一个本地代码仓库push到两个代码管理平台
 author: '谢夏戈'
 date: 2020-08-15
 sidebar: 'auto'
 categories:
- - 学习记录
+ - Github
+ - Git
+ - Gitee
 ---
 
 
@@ -16,14 +18,19 @@ categories:
 [博客（GitHub）](https://xxggg.github.io)  
 [博客（Gitee）](https://xxggg.gitee.io)
 
-![](https://gitee.com/XXGGG/img/raw/master/img/blog1-0.png)
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog1-0.png)
 
 但是得翻墙，挂vpn，才能打开。通过网上了解，似乎之前不用。但我还是遇到了这个问题，如果我想把我的博客给我的朋友看，那他们还要翻墙，那岂不是很麻烦。
 ‘码云’也有类似Github pages的功能 （码云国内的 所以不用翻墙）  
 
 那问题就来了！  
-**“我能不能push一次 把代码同时上传到 ‘GitHub’ 跟 ‘码云’ ”**  
-**“本地一个仓库绑定两个git管理平台”**
+
+
+
+1. **“我能不能push一次 把代码同时上传到 ‘GitHub’ 跟 ‘码云’ ”**  
+2. **“本地一个仓库绑定两个git管理平台”**
+
+
 
 ## 方法一： 使用 <code>git remote add</code> 命令
 
@@ -41,7 +48,7 @@ categories:
 然后再看一次，这样本地仓库就成功绑定多一个远程仓库
 
     $ git remote -v
-
+    
     gitee   https://gitee.com/XXGGG/test.git (fetch)
     gitee   https://gitee.com/XXGGG/test.git (push)
     github  https://github.com/XXGGG/test.git (fetch)
@@ -55,10 +62,12 @@ categories:
 
     git push github
     git push gitee
-
+    
     如果不加远程仓库名 那么默认上一次 git push <远程仓库名>的仓库
 
 > 这是缺点 要push两次 
+
+
 
 ## 方法二：使用 <code>git remote set-url --add</code> 命令
 
@@ -78,6 +87,8 @@ categories:
 
 > 好处是只需要push一次
 
+
+
 ## 方法三：修改.git/config 文件
 >打开本地仓库文件夹后 打开 显示 隐藏文件 就可以看到.git文件夹了 
 
@@ -88,8 +99,13 @@ categories:
         fetch = +refs/heads/*:refs/remotes/github/*
         url = https://gitee.com/XXGGG/test.git
 
+
+
 ## 关于git pull
+
 方法二和三 在pull的 只能从第一个url地址拉取代码
+
+
 
 ## 最后
 虽然我的代码既保存在了GitHub 又保存到了码云。但是还是达不到我的目的。    

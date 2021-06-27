@@ -45,7 +45,6 @@ update(dt){
 - touchstart
 - touchend
 - touchcancel
-  
 ### 示范👇
 点击这个节点，执行moveLeft方法
 ```ts
@@ -55,7 +54,9 @@ onLoad(){
 ```
 
 
+
 ## 关于TypeScript 的类型
+
 ### 基础类型
 - number 数字
 - string 字符串
@@ -86,7 +87,9 @@ label: cc.Label = null
 ```
 
 
+
 ## API
+
 #### 当前节点
 `this.node :cc.Node`
 #### 父节点
@@ -108,12 +111,17 @@ move(){
 ```
 
 
+
 ## 【方法】设置各种属性
+
 **注意！node是变量，不是写死的**    
 [https://docs.cocos.com/creator/api/zh/classes/Node.html?h=node](https://docs.cocos.com/creator/api/zh/classes/Node.html?h=node)  
 - node.setPosition(0,-200) 移动位置
 
+
+
 ## 【方法】API获取组件
+
 访问组件本身的属性
 ```js
 let label = node.getComponent(cc.Label)
@@ -124,6 +132,8 @@ let script = node.getComponent("your script")
 script.方法();
 ```
 
+
+
 ## 坐标
 
 ### 三维 v3 坐标
@@ -132,7 +142,9 @@ cc.v3(100,100,0);
 ```
 
 
+
 ## 【缓动系统】
+
 - cc.tween(节点).to(时间,{方法},{easing:运动速率规律}).start();  
 easing文档: [https://docs.cocos.com/creator/api/zh/classes/Easing.html?h=easing](https://docs.cocos.com/creator/api/zh/classes/Easing.html?h=easing)
 
@@ -140,7 +152,10 @@ easing文档: [https://docs.cocos.com/creator/api/zh/classes/Easing.html?h=easin
 cc.tween(node).to(1,{ position:cc.v3(250,-120,0)}).start();
 ```
 
+
+
 ## 帧动画
+
 帧动画在`update`里做程序，每帧率16毫秒左右。
 ```ts
 update(dt){

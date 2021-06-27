@@ -1,17 +1,19 @@
 ---
-title: 【XXG学习记录02】Gitee自动同步GitHub的仓库
+title: 【XG编程02】Gitee自动同步GitHub的仓库
 author: '谢夏戈'
 date: 2020-08-16
 sidebar: 'auto'
 categories:
- - 学习记录
+ - Github
+ - Gitee
+ - Git
 ---
 ## 前言
 
 因为国内无法访问到GitHub Pages的原因。   
 我把GitHub仓库 同步到了 码云-Gitee  并且启用 Gitee Pages
 
->我想同时更新两个仓库,也就是两个博客。。。
+- 我想同时更新两个仓库,也就是两个博客。。。
 
 - 之前用的方法是 一个本地仓库绑定两个远程仓库（GitHub和Gitee）  
 
@@ -21,9 +23,12 @@ categories:
 这就导致我xxggg.github.io这个博客有更新，而xxggg.gitee.io这个博客没有更新。
 
 解决方法有很多。  
+
+
+
 **一：在我的Gitee项目里按一下强制同步那个按钮（但是这。。。）**  
-![](https://gitee.com/XXGGG/img/raw/master/img/blog2-0.png)
-**二：不用主副分支，分两个仓库，一个源代码，一个打包后的代码。（但是这样每次都要手动打包 还要push两次）**   
+![](https://gitee.com/XXGGG/Xcloud/raw/main/Typora/blog2-0.png)
+**二：不用主副分支，分两个仓库，一个源代码，一个打包后的代码。（但是这样每次都要手动打包 还要push两次)**   
 **三：也就是今天要讲的！👇 用GitHub Actions把代码同步到Gitee**
 
 >主要参考文章：   
@@ -186,7 +191,6 @@ jobs:
 欢迎大家来看我的blog（前端萌新一只）  
 [xxggg.github.io](https://xxggg.github.io)  
 [xxggg.gitee.io](https://xxggg.gitee.io)   
-
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: 🍍『Vue-axios』🍍
+title: 🥝『Vue-axios』🥝
 ---
 
 ## 🟢 Axios    
@@ -66,8 +66,8 @@ this.axios.get('/user', {
   .catch(error => {
     console.log(error);
   });
-  ```
---- 
+```
+---
 
 ## 🟢 POST 方法
 

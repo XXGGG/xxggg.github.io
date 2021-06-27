@@ -1,10 +1,10 @@
 ---
-title: 【XXG学习记录06】解决npm经常下载过慢甚至卡住不动的问题
+title: 【XG编程06】解决npm经常下载过慢甚至卡住不动的问题
 author: '谢夏戈'
 date: 2020-12-13
 sidebar: 'auto'
 categories:
- - 学习记录
+ - npm
 ---
 
 ## 前言
