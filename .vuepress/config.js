@@ -43,25 +43,6 @@ module.exports = {
         ]
       },
       {
-        "text": "🪅 小产品",
-        // "icon": "reco-blog",
-        // "link": "/docs/notebook/"
-        "items": [
-          {
-           "items": [
-              { "text": "📕『商业需求文档-MRD』", "link": "/docs/PmBook/"},
-              { "text": "📗『市场需求文档-BRD』", "link": "/docs/PmBook/"},
-              { "text": "📘『产品需求文档-PRD』", "link": "/docs/PmBook/"},
-              { "text": "🟧『思维导图』", "link": "/docs/PmBook/"},
-              { "text": "🟨『流程图』", "link": "/docs/PmBook/"},
-              { "text": "🟪『拓扑图』", "link": "/docs/PmBook/"},
-              { "text": "✒️『UE/UI-Figma』", "link": "/docs/PmBook/"},
-              { "text": "🪀『原型图-Axure』", "link": "/docs/PmBook/"},
-           ]
-          }
-        ]
-      },
-      {
         "text": "🐤 小黄鸭",
         // "icon": "reco-other",
         "link": "/docs/BathDuck/"
