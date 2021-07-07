@@ -4,18 +4,13 @@ title: 🥝『Vue-router』🥝
 
 [【参考文章】](https://www.jspang.com/detailed?id=25)
 
-简介： 由于Vue在开发时对路由支持的不足，后来官方补充了`vue-router`插件，它在Vue的生态环境中非常重要，在实际开发中只要编写一个页面就会操作`vue-router`。要学习`vue-router`就要先知道这里的路由是什么？这里的路由并不是指我们平时所说的硬件路由器，这里的路由就是SPA（单页应用）的路径管理器。再通俗的说，`vue-router`就是我们WebApp的链接路径管理系统。
+## 🟢【vue2的引入】
 
-有的小伙伴会有疑虑，为什么我们不能像原来一样直接用`<a></a>`标签编写链接哪？因为我们用Vue作的都是单页应用，就相当于只有一个主的index.html页面，所以你写的`<a></a>`标签是不起作用的，你必须使用`vue-router`来进行管理。
-
-
-
-## 🟢【安装】
-
+#### 安装👇
 ```sh
 npm install vue-router --save-dev
 ```
-在vue-cli的配置👇
+#### 在vue-cli的配置👇
 ```js
 //src/router/index.js
 import Vue from 'vue'
@@ -35,12 +30,42 @@ export default new Router({
   ]
 })
 ```
-> 在vue2.x是用Vue.use(VueRouter)   
-在vue3.x用的是 createApp(App).use(router).mount('#app')  
-不过那个.mount是挂在 类似于 new Vue({ el:app }) 
-
 ---
+## 🟢【vue3的引入】
 
+#### 安装👇
+```sh
+npm install vue-router@next
+```
+
+#### router.ts
+```ts
+// src/router/router.ts
+import { createRouter, createWebHistory } from "vue-router";
+
+const routes = [
+    { path:'/',name:'home',component:()=>import('../pages/home.vue')}
+]
+
+const router = createRouter({
+    history:createWebHistory(),
+    routes
+});
+
+export default router;
+```
+#### 在vue-cli的配置👇
+```js
+// src/main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router/router'
+
+const app = createApp(App);
+app.use(router)
+app.mount('#app')
+```
+---
 
 
 ## 🟢【基础】
@@ -48,28 +73,6 @@ export default new Router({
 在模板里要跳转的链接 肯定是使用
 ```html
 <router-link to="/xxg">Go to xxg</router-link>
-```
-这样的方式~
-```js
-//src/router/index.js
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Hello from '@/components/Hello'  //引入根目录下的Hello.vue组件
-import xxg from '@/components/xxg'
-
-Vue.use(VueRouter)
-
-export default new Router({
-  routes: [              //配置路由，这里是个数组
-    {                    //每一个链接都是一个对象
-      path: '/',         //链接路径
-      name: 'Hello',     //路由名称，
-      component: Hello   //对应的组件模板
-    }
-    // {path:'/',name:'Hello',component:Hello} //可以写成一行！好看！
-    {path:'/xxg',name:'xxg',component:xxg}
-  ]
-})
 ```
 ---
 

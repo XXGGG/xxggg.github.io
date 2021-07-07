@@ -1,7 +1,6 @@
 ---
-title: 🥝『Vue』🥝
+title: 🥝『Vue2』🥝
 ---
-
 
 ## 🟢 基础
 
@@ -21,10 +20,6 @@ component:{
 <xx-ggg></xx-ggg>
 <XxGgg></XxGgg>
 ```
-
-
-
-
 
 ### 🟢 『父 传 子』
 父组件可以通过属性的方式   

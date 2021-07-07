@@ -1,5 +1,5 @@
 ---
-title: 🥝『Vue-axios』🥝
+title: 🥝『Axios』🥝
 ---
 
 ## 🟢 Axios    
@@ -11,24 +11,29 @@ Github开源地址： [https://github.com/axios/axios](https://github.com/axios/
 
 ### 🔵 安装方法
 
-    $ npm install axios -S
+#### 【vue2.x 和 vue3.x的安装】
+```sh
+npm install axios -S
+```
 
 ### 🔵 配置
-
-用vue-cli的话(vue2.x的情况下)  
-在main.js文件中
-
+在main.js文件中👇
+#### 【vue2.x的配置】
 ```js
 import axios from 'axios'
 //把 `axios` 加到 `Vue` 的原型中
 Vue.prototype.axios = axios;
 ```
 
+#### 【vue3.x的配置】
+```js
+import axios from 'axios'
+//把 `axios` 加到 `Vue` 的原型中
+app.config.globalProperties.$axios=axios
+```
 这样，axios就可以全局调用了 
 
 **可以设置一个处理请求的js文件，用来处理请求前后的处理（比如什么超时呀，地址那些，拦截器 等等......**
-
-
 
 ---
 
@@ -137,7 +142,7 @@ axios({
 >拦截器留到【全局配置】在说👇👇👇   
 
 ---
-## 🟢 跨域与代理 
+## 🟢 【vue2.x】跨域与代理 
 在vue本地开发时请求总是发生跨域 解决方案：配置代理 config 下的index.js文件  
 
 ### 🔵 第一步👇

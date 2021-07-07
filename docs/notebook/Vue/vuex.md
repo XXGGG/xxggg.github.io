@@ -1,26 +1,15 @@
 ---
-title: 🥝『Vue-vuex』🥝
+title: 🥝『vuex』🥝
 ---
 
-**Vuex** 是一个专为 Vue.js 应用程序开发的状态管理模式
+**Vuex** 是一个专为 Vue.js 应用程序开发的状态管理模式   
 
->**Vuex 依赖 Promise**
+`state`  `...mapState` `mutations` `...mapMutations`  
 
-> 对于vuex，这个状态管理，用得比较多的暂时还是  
-`state`  `...mapState` `mutations` `...mapMutations`
-
-## 🟢 安装
-【vue2.x】👇
+## 🟢 【vue2.x的引入】
 ```sh
 npm install vuex --save
 ```
-```js
-//引入-> src/store/index.js
-import Vue from 'vue'
-import Vuex from 'vuex'
-Vue.use(Vuex)
-```
-## 🟢 开始
 ```js
 // src/store/index.js👇
 import Vue from 'vue'
@@ -41,6 +30,46 @@ export default = new Vuex.Store({
   }
 })
 ```
+```js
+import store from './store'
+
+new Vue({
+    el:'#app',
+    //store:store,
+    store  //ES6写法
+})
+```
+
+## 🟢 【vue3.x的引入】
+```sh
+npm install vuex@next
+```
+```ts
+//引入-> src/store/index.js
+import { createStore } from 'vuex'
+export default createStore({
+  state: {
+    name: 'zhagnsan'
+  }
+})
+```
+```ts
+//引入-> src/main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router/router'
+import store from './store/index'
+
+const app = createApp(App)
+app.use(router)
+app.use(store)
+app.mount('#app')
+```
+
+
+
+## 🟢 开始
+
 - state 用来表示（状态）
 - mutations 设置一些改变state（状态）的方法，
 
@@ -62,21 +91,6 @@ console.log(this.$store.state.count)
 <button @click="$store.commit('add',10)">+</button>
 <button @click="$store.commit('reduce')">-</button> 
 ```
->后面还有更简单的全局方法！
-
----
-## 🟢 全局注册
-为了在 Vue 组件中访问 this.$store property，你需要为 Vue 实例提供创建好的 store。Vuex 提供了一个从根组件向所有子组件，以 store 选项的方式“注入”该 store 的机制：
-```js
-import store from './store'
-
-new Vue({
-    el:'#app',
-    //store:store,
-    store  //ES6写法
-})
-```
->就是在`store/index.js 文件写完用法后 把它引入到main.js里面来 并全局注册来使用。
 
 ---
 
